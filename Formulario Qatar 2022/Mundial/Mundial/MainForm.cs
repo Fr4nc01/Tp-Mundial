@@ -1,17 +1,11 @@
-﻿/*
- * Created by SharpDevelop.
- * User: Alumno
- * Date: 14/11/2022
- * Time: 10:13
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
+﻿
 using Mundial.Properties;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Mundial
 {
@@ -20,10 +14,13 @@ namespace Mundial
 	/// </summary>
 	public partial class MainForm : Form
 	{
+
+        SqlConnection bd = new SqlConnection();
 		public MainForm()
 		{
 			InitializeComponent();
             lbPais.Text = "";
+
 			
 			
 		}
@@ -42,6 +39,8 @@ namespace Mundial
                 ElegirPais.Items.Add("Ecuador");
                 ElegirPais.Items.Add("Senegal");
                 ElegirPais.Items.Add("Paises Bajos");
+                pictureBox1.Image = Resources.bandera_blanca;
+                lbPais.Text = "";
                 lbSpais.Visible = true;
 				ElegirPais.Visible = true;
 			}
@@ -52,6 +51,8 @@ namespace Mundial
                 ElegirPais.Items.Add("Iràn");
                 ElegirPais.Items.Add("Estados Unidos");
                 ElegirPais.Items.Add("Gales");
+                pictureBox1.Image = Resources.bandera_blanca;
+                lbPais.Text = "";
                 lbSpais.Visible = true;
 				ElegirPais.Visible = true;
 			}
@@ -62,6 +63,8 @@ namespace Mundial
                 ElegirPais.Items.Add("Arabia Saudita");
                 ElegirPais.Items.Add("Mexico");
                 ElegirPais.Items.Add("Polonia");
+                pictureBox1.Image = Resources.bandera_blanca;
+                lbPais.Text = "";
                 lbSpais.Visible = true;
                 ElegirPais.Visible = true;
             }
@@ -72,6 +75,8 @@ namespace Mundial
                 ElegirPais.Items.Add("Australia");
                 ElegirPais.Items.Add("Dinamarca");
                 ElegirPais.Items.Add("Tùnez");
+                pictureBox1.Image = Resources.bandera_blanca;
+                lbPais.Text = "";
                 lbSpais.Visible = true;
                 ElegirPais.Visible = true;
             }
@@ -82,6 +87,8 @@ namespace Mundial
                 ElegirPais.Items.Add("Costa Rica");
                 ElegirPais.Items.Add("Alemania");
                 ElegirPais.Items.Add("Japón");
+                pictureBox1.Image = Resources.bandera_blanca;
+                lbPais.Text = "";
                 lbSpais.Visible = true;
                 ElegirPais.Visible = true;
             }
@@ -92,6 +99,8 @@ namespace Mundial
                 ElegirPais.Items.Add("Canadá");
                 ElegirPais.Items.Add("Marruecos");
                 ElegirPais.Items.Add("Croacia");
+                pictureBox1.Image = Resources.bandera_blanca;
+                lbPais.Text = "";
                 lbSpais.Visible = true;
                 ElegirPais.Visible = true;
             }
@@ -102,6 +111,8 @@ namespace Mundial
                 ElegirPais.Items.Add("Serbia");
                 ElegirPais.Items.Add("Suiza");
                 ElegirPais.Items.Add("Camerún");
+                pictureBox1.Image = Resources.bandera_blanca;
+                lbPais.Text = "";
                 lbSpais.Visible = true;
                 ElegirPais.Visible = true;
             }
@@ -112,6 +123,8 @@ namespace Mundial
                 ElegirPais.Items.Add("Ghana");
                 ElegirPais.Items.Add("Uruguay");
                 ElegirPais.Items.Add("Corea del Sur");
+                pictureBox1.Image = Resources.bandera_blanca;
+                lbPais.Text = "";
                 lbSpais.Visible = true;
                 ElegirPais.Visible = true;
             }
@@ -333,6 +346,68 @@ namespace Mundial
 
             }
 
+        }
+
+        private void BtnAyuda_Click(object sender, EventArgs e)
+        {
+            panelAyuda.Visible = true;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            panelAyuda.Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            BtnAyuda.Visible = true;
+            btnCargaDatos.Visible = true;
+            groupBoxCarga.Visible = true;
+            btnCargar.Visible = false;
+            btnEliminar.Visible = false;
+            btnModificar.Visible = false;
+            btnVolver.Visible = true;
+
+
+
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            BtnAyuda.Visible = false;
+            btnCargaDatos.Visible = false;
+            groupBoxCarga.Visible = false;
+            btnCargar.Visible = true;
+            btnEliminar.Visible = true;
+            btnModificar.Visible = true;
+            btnVolver.Visible = false;
+        }
+
+        private void btnCargaDatos_Click(object sender, EventArgs e)
+        {
+            BtnAyuda.Visible = false;
+            btnCargaDatos.Visible = false;
+            groupBoxCarga.Visible = false;
+            btnCargar.Visible = true;
+            btnEliminar.Visible = true;
+            btnModificar.Visible = true;
+            btnVolver.Visible = false;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+           panelSeguroEliminar.Visible = true;
+        }
+
+        private void btnEliminarNo_Click(object sender, EventArgs e)
+        {
+            panelSeguroEliminar.Visible = false;
+        }
+
+        private void btnEliminarSi_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Datos eliminados correctamente!");
+            panelSeguroEliminar.Visible = false;
         }
     }
 }

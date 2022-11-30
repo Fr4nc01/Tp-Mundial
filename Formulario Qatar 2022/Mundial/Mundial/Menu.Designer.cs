@@ -71,7 +71,7 @@ namespace Mundial
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(356, 63);
             this.button2.TabIndex = 1;
-            this.button2.Text = "EQUIPOS";
+            this.button2.Text = "FASE DE GRUPOS";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.Button2Click);
             // 
