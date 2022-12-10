@@ -18,7 +18,11 @@ namespace Mundial
 	public partial class Menu : Form
 	{
 		
-		MainForm ventana = new MainForm();
+		faseDeGrupos faseDeGrupos = new faseDeGrupos();
+		octavos octavos = new octavos();
+		cuartos cuartos = new cuartos();
+		semi semi = new semi();
+		final final = new final();
 		
 		public Menu()
 		{
@@ -30,29 +34,38 @@ namespace Mundial
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
-		}
-		
-		void Button1Click(object sender, EventArgs e)
-		{
-			ventana.ControlSection.SelectedIndex = 1;
-			ventana.ShowDialog();
-		}
+		}		
 		
 		void MenuLoad(object sender, EventArgs e)
 		{
 			
 		}
-		
-		void Button2Click(object sender, EventArgs e)
+		void Button2Click(object sender, EventArgs e) // fase de grupos
 		{
-			ventana.ControlSection.SelectedIndex = 0;
-			ventana.ShowDialog();
+            faseDeGrupos.ControlSection.SelectedIndex = 0;
+            faseDeGrupos.ShowDialog();
 		}
-		
-		void Button3Click(object sender, EventArgs e)
+
+		void btnOctavosClick(object sender, EventArgs e) // octavos
 		{
-			ventana.ControlSection.SelectedIndex = 2;
-			ventana.ShowDialog();
+			//octavos.ControlSection.SelectedIndex = 1;
+			octavos.ShowDialog();
+		}		
+		
+		void btnCuartosClick(object sender, EventArgs e) // Cuartos
+		{
+			//cuartos.ControlSection.SelectedIndex = 2;
+			cuartos.ShowDialog();
+		}
+
+		private void btnSemi_Click(object sender, EventArgs e) // SEMI
+		{
+			semi.ShowDialog();
+		}
+
+		private void btnFinal_Click(object sender, EventArgs e) //FINAL
+		{
+			final.ShowDialog();
 		}
 	}
 }

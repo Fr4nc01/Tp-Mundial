@@ -59,7 +59,7 @@ namespace Mundial
             this.btnOctavos.TabIndex = 0;
             this.btnOctavos.Text = "OCTAVOS";
             this.btnOctavos.UseVisualStyleBackColor = false;
-            this.btnOctavos.Click += new System.EventHandler(this.Button1Click);
+            this.btnOctavos.Click += new System.EventHandler(this.btnOctavosClick);
             // 
             // button2
             // 
@@ -91,7 +91,7 @@ namespace Mundial
             this.btnCuartos.TabIndex = 2;
             this.btnCuartos.Text = "CUARTOS";
             this.btnCuartos.UseVisualStyleBackColor = false;
-            this.btnCuartos.Click += new System.EventHandler(this.Button3Click);
+            this.btnCuartos.Click += new System.EventHandler(this.btnCuartosClick);
             // 
             // label1
             // 
@@ -119,6 +119,7 @@ namespace Mundial
             this.btnSemi.TabIndex = 4;
             this.btnSemi.Text = "SEMI";
             this.btnSemi.UseVisualStyleBackColor = false;
+            this.btnSemi.Click += new System.EventHandler(this.btnSemi_Click);
             // 
             // btnFinal
             // 
@@ -134,6 +135,7 @@ namespace Mundial
             this.btnFinal.TabIndex = 5;
             this.btnFinal.Text = "FINAL";
             this.btnFinal.UseVisualStyleBackColor = false;
+            this.btnFinal.Click += new System.EventHandler(this.btnFinal_Click);
             // 
             // Menu
             // 

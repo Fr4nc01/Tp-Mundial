@@ -54,17 +54,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainForm.cs">
+    <Compile Include="cuartos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="cuartos.Designer.cs">
+      <DependentUpon>cuartos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="faseDeGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="faseDeGrupos.Designer.cs">
+      <DependentUpon>faseDeGrupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="final.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="final.Designer.cs">
+      <DependentUpon>final.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="octavos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="octavos.Designer.cs">
+      <DependentUpon>octavos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,10 +91,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="semi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="semi.Designer.cs">
+      <DependentUpon>semi.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="faseDeGrupos.resx">
+      <DependentUpon>faseDeGrupos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
