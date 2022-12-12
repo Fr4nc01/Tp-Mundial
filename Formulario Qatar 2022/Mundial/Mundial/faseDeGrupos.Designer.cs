@@ -63,22 +63,22 @@ namespace Mundial
             this.groupBoxCarga = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtTAmarilla = new System.Windows.Forms.TextBox();
+            this.txtTRojas = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtPartidosGanados = new System.Windows.Forms.TextBox();
+            this.txtDifGoles = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtGolesAfavor = new System.Windows.Forms.TextBox();
+            this.txtPerdidos = new System.Windows.Forms.TextBox();
+            this.txtEmpate = new System.Windows.Forms.TextBox();
+            this.txtGolesEnContra = new System.Windows.Forms.TextBox();
+            this.txtPartJugado = new System.Windows.Forms.TextBox();
             this.lbSgrupo = new System.Windows.Forms.Label();
             this.ElegirGrupo = new System.Windows.Forms.ComboBox();
             this.lbSpais = new System.Windows.Forms.Label();
@@ -87,9 +87,11 @@ namespace Mundial
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ControlSection = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnConsultarFdG = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnConsultarFdG = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnMostrar = new System.Windows.Forms.Button();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.tabPage1.SuspendLayout();
             this.panelSeguroEliminar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -105,6 +107,8 @@ namespace Mundial
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Brown;
             this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
+            this.tabPage1.Controls.Add(this.txtID);
+            this.tabPage1.Controls.Add(this.btnMostrar);
             this.tabPage1.Controls.Add(this.panelSeguroEliminar);
             this.tabPage1.Controls.Add(this.btnVolver);
             this.tabPage1.Controls.Add(this.btnCargaDatos);
@@ -197,9 +201,9 @@ namespace Mundial
             this.btnCargaDatos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCargaDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargaDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargaDatos.Location = new System.Drawing.Point(720, 316);
+            this.btnCargaDatos.Location = new System.Drawing.Point(642, 310);
             this.btnCargaDatos.Name = "btnCargaDatos";
-            this.btnCargaDatos.Size = new System.Drawing.Size(173, 35);
+            this.btnCargaDatos.Size = new System.Drawing.Size(145, 35);
             this.btnCargaDatos.TabIndex = 5;
             this.btnCargaDatos.Text = "CARGA";
             this.btnCargaDatos.UseVisualStyleBackColor = false;
@@ -212,7 +216,7 @@ namespace Mundial
             this.btnCargar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargar.Location = new System.Drawing.Point(673, 66);
+            this.btnCargar.Location = new System.Drawing.Point(120, 340);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(296, 67);
             this.btnCargar.TabIndex = 13;
@@ -226,11 +230,11 @@ namespace Mundial
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(673, 139);
+            this.btnEliminar.Location = new System.Drawing.Point(120, 413);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(296, 67);
             this.btnEliminar.TabIndex = 12;
-            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.Text = "CONSULTAR";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -240,7 +244,7 @@ namespace Mundial
             this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(673, 212);
+            this.btnModificar.Location = new System.Drawing.Point(120, 486);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(296, 67);
             this.btnModificar.TabIndex = 11;
@@ -367,11 +371,11 @@ namespace Mundial
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(4, 49);
+            this.label10.Location = new System.Drawing.Point(-1, 49);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 20);
+            this.label10.Size = new System.Drawing.Size(188, 20);
             this.label10.TabIndex = 23;
-            this.label10.Text = "G: Goles";
+            this.label10.Text = "PG: Partidos Ganados";
             // 
             // label11
             // 
@@ -411,22 +415,22 @@ namespace Mundial
             this.groupBoxCarga.BackColor = System.Drawing.Color.Transparent;
             this.groupBoxCarga.Controls.Add(this.label8);
             this.groupBoxCarga.Controls.Add(this.label9);
-            this.groupBoxCarga.Controls.Add(this.textBox8);
-            this.groupBoxCarga.Controls.Add(this.textBox9);
+            this.groupBoxCarga.Controls.Add(this.txtTAmarilla);
+            this.groupBoxCarga.Controls.Add(this.txtTRojas);
             this.groupBoxCarga.Controls.Add(this.label7);
             this.groupBoxCarga.Controls.Add(this.label6);
             this.groupBoxCarga.Controls.Add(this.label4);
             this.groupBoxCarga.Controls.Add(this.label1);
             this.groupBoxCarga.Controls.Add(this.label3);
             this.groupBoxCarga.Controls.Add(this.label5);
-            this.groupBoxCarga.Controls.Add(this.textBox7);
-            this.groupBoxCarga.Controls.Add(this.textBox6);
+            this.groupBoxCarga.Controls.Add(this.txtPartidosGanados);
+            this.groupBoxCarga.Controls.Add(this.txtDifGoles);
             this.groupBoxCarga.Controls.Add(this.label2);
-            this.groupBoxCarga.Controls.Add(this.textBox5);
-            this.groupBoxCarga.Controls.Add(this.textBox4);
-            this.groupBoxCarga.Controls.Add(this.textBox3);
-            this.groupBoxCarga.Controls.Add(this.textBox2);
-            this.groupBoxCarga.Controls.Add(this.textBox1);
+            this.groupBoxCarga.Controls.Add(this.txtGolesAfavor);
+            this.groupBoxCarga.Controls.Add(this.txtPerdidos);
+            this.groupBoxCarga.Controls.Add(this.txtEmpate);
+            this.groupBoxCarga.Controls.Add(this.txtGolesEnContra);
+            this.groupBoxCarga.Controls.Add(this.txtPartJugado);
             this.groupBoxCarga.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBoxCarga.Location = new System.Drawing.Point(592, 47);
             this.groupBoxCarga.Name = "groupBoxCarga";
@@ -458,21 +462,21 @@ namespace Mundial
             this.label9.TabIndex = 15;
             this.label9.Text = "TA";
             // 
-            // textBox8
+            // txtTAmarilla
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(131, 205);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(64, 22);
-            this.textBox8.TabIndex = 14;
+            this.txtTAmarilla.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTAmarilla.Location = new System.Drawing.Point(131, 205);
+            this.txtTAmarilla.Name = "txtTAmarilla";
+            this.txtTAmarilla.Size = new System.Drawing.Size(64, 22);
+            this.txtTAmarilla.TabIndex = 14;
             // 
-            // textBox9
+            // txtTRojas
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(239, 205);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(64, 22);
-            this.textBox9.TabIndex = 13;
+            this.txtTRojas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTRojas.Location = new System.Drawing.Point(239, 205);
+            this.txtTRojas.Name = "txtTRojas";
+            this.txtTRojas.Size = new System.Drawing.Size(64, 22);
+            this.txtTRojas.TabIndex = 13;
             // 
             // label7
             // 
@@ -490,11 +494,11 @@ namespace Mundial
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(152, 36);
+            this.label6.Location = new System.Drawing.Point(141, 36);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(23, 20);
+            this.label6.Size = new System.Drawing.Size(34, 20);
             this.label6.TabIndex = 12;
-            this.label6.Text = "G";
+            this.label6.Text = "PG";
             // 
             // label4
             // 
@@ -540,21 +544,21 @@ namespace Mundial
             this.label5.TabIndex = 11;
             this.label5.Text = "P";
             // 
-            // textBox7
+            // txtPartidosGanados
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(129, 59);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(64, 22);
-            this.textBox7.TabIndex = 6;
+            this.txtPartidosGanados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPartidosGanados.Location = new System.Drawing.Point(129, 59);
+            this.txtPartidosGanados.Name = "txtPartidosGanados";
+            this.txtPartidosGanados.Size = new System.Drawing.Size(64, 22);
+            this.txtPartidosGanados.TabIndex = 6;
             // 
-            // textBox6
+            // txtDifGoles
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(289, 137);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(64, 22);
-            this.textBox6.TabIndex = 5;
+            this.txtDifGoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDifGoles.Location = new System.Drawing.Point(289, 137);
+            this.txtDifGoles.Name = "txtDifGoles";
+            this.txtDifGoles.Size = new System.Drawing.Size(64, 22);
+            this.txtDifGoles.TabIndex = 5;
             // 
             // label2
             // 
@@ -567,45 +571,45 @@ namespace Mundial
             this.label2.TabIndex = 8;
             this.label2.Text = "E";
             // 
-            // textBox5
+            // txtGolesAfavor
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(79, 137);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(64, 22);
-            this.textBox5.TabIndex = 4;
+            this.txtGolesAfavor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGolesAfavor.Location = new System.Drawing.Point(79, 137);
+            this.txtGolesAfavor.Name = "txtGolesAfavor";
+            this.txtGolesAfavor.Size = new System.Drawing.Size(64, 22);
+            this.txtGolesAfavor.TabIndex = 4;
             // 
-            // textBox4
+            // txtPerdidos
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(334, 59);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(64, 22);
-            this.textBox4.TabIndex = 3;
+            this.txtPerdidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPerdidos.Location = new System.Drawing.Point(334, 59);
+            this.txtPerdidos.Name = "txtPerdidos";
+            this.txtPerdidos.Size = new System.Drawing.Size(64, 22);
+            this.txtPerdidos.TabIndex = 3;
             // 
-            // textBox3
+            // txtEmpate
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(237, 59);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(64, 22);
-            this.textBox3.TabIndex = 2;
+            this.txtEmpate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpate.Location = new System.Drawing.Point(237, 59);
+            this.txtEmpate.Name = "txtEmpate";
+            this.txtEmpate.Size = new System.Drawing.Size(64, 22);
+            this.txtEmpate.TabIndex = 2;
             // 
-            // textBox2
+            // txtGolesEnContra
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(186, 137);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(64, 22);
-            this.textBox2.TabIndex = 1;
+            this.txtGolesEnContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGolesEnContra.Location = new System.Drawing.Point(186, 137);
+            this.txtGolesEnContra.Name = "txtGolesEnContra";
+            this.txtGolesEnContra.Size = new System.Drawing.Size(64, 22);
+            this.txtGolesEnContra.TabIndex = 1;
             // 
-            // textBox1
+            // txtPartJugado
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(26, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(64, 22);
-            this.textBox1.TabIndex = 0;
+            this.txtPartJugado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPartJugado.Location = new System.Drawing.Point(26, 59);
+            this.txtPartJugado.Name = "txtPartJugado";
+            this.txtPartJugado.Size = new System.Drawing.Size(64, 22);
+            this.txtPartJugado.TabIndex = 0;
             // 
             // lbSgrupo
             // 
@@ -717,13 +721,13 @@ namespace Mundial
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             // 
-            // comboBox1
+            // dataGridView1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(19, 17);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(699, 21);
-            this.comboBox1.TabIndex = 0;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(19, 71);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(822, 224);
+            this.dataGridView1.TabIndex = 2;
             // 
             // btnConsultarFdG
             // 
@@ -734,13 +738,36 @@ namespace Mundial
             this.btnConsultarFdG.Text = "CONSULTAR";
             this.btnConsultarFdG.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // comboBox1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 71);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(822, 224);
-            this.dataGridView1.TabIndex = 2;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(19, 17);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(699, 21);
+            this.comboBox1.TabIndex = 0;
+            // 
+            // btnMostrar
+            // 
+            this.btnMostrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnMostrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrar.Location = new System.Drawing.Point(816, 310);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(145, 35);
+            this.btnMostrar.TabIndex = 16;
+            this.btnMostrar.Text = "MOSTRAR";
+            this.btnMostrar.UseVisualStyleBackColor = false;
+            this.btnMostrar.Visible = false;
+            this.btnMostrar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtID
+            // 
+            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(440, 19);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(64, 22);
+            this.txtID.TabIndex = 17;
             // 
             // faseDeGrupos
             // 
@@ -794,22 +821,22 @@ namespace Mundial
         private System.Windows.Forms.GroupBox groupBoxCarga;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtTAmarilla;
+        private System.Windows.Forms.TextBox txtTRojas;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtPartidosGanados;
+        private System.Windows.Forms.TextBox txtDifGoles;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtGolesAfavor;
+        private System.Windows.Forms.TextBox txtPerdidos;
+        private System.Windows.Forms.TextBox txtEmpate;
+        private System.Windows.Forms.TextBox txtGolesEnContra;
+        private System.Windows.Forms.TextBox txtPartJugado;
         private System.Windows.Forms.Label lbSgrupo;
         private System.Windows.Forms.ComboBox ElegirGrupo;
         private System.Windows.Forms.Label lbSpais;
@@ -825,5 +852,7 @@ namespace Mundial
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnConsultarFdG;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.TextBox txtID;
     }
 }
