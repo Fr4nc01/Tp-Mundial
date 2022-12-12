@@ -34,3 +34,15 @@ C:\Users\Branco\Desktop\Tp-Mundial\Formulario Qatar 2022\Mundial\Mundial\obj\Deb
 C:\Users\Branco\Desktop\Tp-Mundial\Formulario Qatar 2022\Mundial\Mundial\obj\Debug\Mundial.exe
 C:\Users\Branco\Desktop\Tp-Mundial\Formulario Qatar 2022\Mundial\Mundial\obj\Debug\Mundial.pdb
 C:\Users\Branco\Desktop\Tp-Mundial\Formulario Qatar 2022\Mundial\Mundial\obj\Debug\Mundial.faseDeGrupos.resources
+C:\Users\Branco\Desktop\tp mundial corre\Tp-Mundial\Formulario Qatar 2022\Mundial\Mundial\bin\Debug\Mundial.exe.config
+C:\Users\Branco\Desktop\tp mundial corre\Tp-Mundial\Formulario Qatar 2022\Mundial\Mundial\bin\Debug\Mundial.exe
+C:\Users\Branco\Desktop\tp mundial corre\Tp-Mundial\Formulario Qatar 2022\Mundial\Mundial\bin\Debug\Mundial.pdb
+C:\Users\Branco\Desktop\tp mundial corre\Tp-Mundial\Formulario Qatar 2022\Mundial\Mundial\obj\Debug\Mundial.csproj.AssemblyReference.cache
+C:\Users\Branco\Desktop\tp mundial corre\Tp-Mundial\Formulario Qatar 2022\Mundial\Mundial\obj\Debug\Mundial.csproj.SuggestedBindingRedirects.cache
+C:\Users\Branco\Desktop\tp mundial corre\Tp-Mundial\Formulario Qatar 2022\Mundial\Mundial\obj\Debug\Mundial.faseDeGrupos.resources
+C:\Users\Branco\Desktop\tp mundial corre\Tp-Mundial\Formulario Qatar 2022\Mundial\Mundial\obj\Debug\Mundial.Menu.resources
+C:\Users\Branco\Desktop\tp mundial corre\Tp-Mundial\Formulario Qatar 2022\Mundial\Mundial\obj\Debug\Mundial.Properties.Resources.resources
+C:\Users\Branco\Desktop\tp mundial corre\Tp-Mundial\Formulario Qatar 2022\Mundial\Mundial\obj\Debug\Mundial.csproj.GenerateResource.cache
+C:\Users\Branco\Desktop\tp mundial corre\Tp-Mundial\Formulario Qatar 2022\Mundial\Mundial\obj\Debug\Mundial.csproj.CoreCompileInputs.cache
+C:\Users\Branco\Desktop\tp mundial corre\Tp-Mundial\Formulario Qatar 2022\Mundial\Mundial\obj\Debug\Mundial.exe
+C:\Users\Branco\Desktop\tp mundial corre\Tp-Mundial\Formulario Qatar 2022\Mundial\Mundial\obj\Debug\Mundial.pdb
