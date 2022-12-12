@@ -20,7 +20,7 @@ namespace Mundial.DATOS
 
         }
 
-        public SqlConnection Conectar()
+        public SqlConnection Conectar() //metodo para conectarse
         {
             try
             {
@@ -35,7 +35,7 @@ namespace Mundial.DATOS
             
 
         }
-        public SqlConnection desconectar()
+        public SqlConnection desconectar() //metodo para desconectarse
         {
             try
             {
