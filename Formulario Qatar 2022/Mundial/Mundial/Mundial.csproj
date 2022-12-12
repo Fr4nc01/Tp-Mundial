@@ -217,5 +217,11 @@
   <ItemGroup>
     <None Include="Banderas\BanJapon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoForm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoPasto.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

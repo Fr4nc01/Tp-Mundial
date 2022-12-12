@@ -9,6 +9,7 @@ using System.Data.SqlClient;
 using Mundial.PARTIDOS;
 using Mundial.DATOS;
 using System.Data;
+using System.Runtime.Versioning;
 
 namespace Mundial
 {
@@ -535,6 +536,224 @@ namespace Mundial
             txtTRojas.Text = "";
             txtDifGoles.Text = "";
           
+        }
+
+        private void comboBoxPartido_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pictureBoxPais1.Visible = true;
+            pictureBoxPais2.Visible = true;
+
+            txtGrupo1.Visible = true;
+            comboBoxGrupo1.Visible = true;
+
+            txtGrupo2.Visible = true;
+            comboBoxGrupo2.Visible = true;
+
+            txtPais1.Visible = true;
+            comboBoxPais1.Visible = true;
+
+            txtPais2.Visible = true;
+            comboBoxPais2.Visible = true;
+
+            comboBoxGrupo1.Enabled = false;
+            comboBoxGrupo2.Enabled = false;
+            comboBoxPais1.Enabled = false;
+            comboBoxPais2.Enabled = false;
+
+            txtGoles1.Visible = true;
+            txtGoles2.Visible = true;
+            txtTa1.Visible = true;
+            txtTA2.Visible = true;
+            txtTR1.Visible = true;
+            txtTR2.Visible = true;
+
+            cantGoles1.Visible = true;
+            cantGoles2.Visible = true;
+            cantTA1.Visible= true;
+            cantTA2.Visible= true;
+            cantTR1.Visible= true;
+            cantTR2.Visible = true;
+
+
+            if(ElegirPartido.SelectedIndex == 0) // PARTIDO [1] GRUPO A
+            {
+                pictureBoxPais1.Image = Resources.BanQatar;
+                pictureBoxPais2.Image = Resources.BanEcuador;
+
+                comboBoxPais1.Text = "Qatar";
+                comboBoxPais2.Text = "Ecuador";
+
+                comboBoxGrupo1.Text = "Grupo A";
+                comboBoxGrupo2.Text = "Grupo A";
+            }
+
+            if (ElegirPartido.SelectedIndex == 1) // PARTIDO [2] GRUPO A
+            {
+                pictureBoxPais1.Image = Resources.BanSenegal;
+                pictureBoxPais2.Image = Resources.BanPaisesBajos;
+
+                comboBoxPais1.Text = "Senegal";
+                comboBoxPais2.Text = "Paises Bajos";
+
+                comboBoxGrupo1.Text = "Grupo A";
+                comboBoxGrupo2.Text = "Grupo A";
+            }
+
+            if (ElegirPartido.SelectedIndex == 2) // PARTIDO [3] GRUPO A
+            {
+                pictureBoxPais1.Image = Resources.BanQatar;
+                pictureBoxPais2.Image = Resources.BanSenegal;
+
+                comboBoxPais1.Text = "Qatar";
+                comboBoxPais2.Text = "Senegal";
+
+                comboBoxGrupo1.Text = "Grupo A";
+                comboBoxGrupo2.Text = "Grupo A";
+            }
+
+            if (ElegirPartido.SelectedIndex == 3) // PARTIDO [4] GRUPO A
+            {
+                pictureBoxPais1.Image = Resources.BanPaisesBajos;
+                pictureBoxPais2.Image = Resources.BanEcuador;
+
+                comboBoxPais1.Text = "Paises Bajos";
+                comboBoxPais2.Text = "Ecuador";
+
+                comboBoxGrupo1.Text = "Grupo A";
+                comboBoxGrupo2.Text = "Grupo A";
+            }
+
+            if (ElegirPartido.SelectedIndex == 4) // PARTIDO [5] GRUPO A
+            {
+                pictureBoxPais1.Image = Resources.BanQatar;
+                pictureBoxPais2.Image = Resources.BanPaisesBajos;
+
+                comboBoxPais1.Text = "Qatar";
+                comboBoxPais2.Text = "Paises Bajos";
+
+                comboBoxGrupo1.Text = "Grupo A";
+                comboBoxGrupo2.Text = "Grupo A";
+            }
+
+            if (ElegirPartido.SelectedIndex == 5) // PARTIDO [6] GRUPO A
+            {
+                pictureBoxPais1.Image = Resources.BanEcuador;
+                pictureBoxPais2.Image = Resources.BanSenegal;
+
+                comboBoxPais1.Text = "Ecuador";
+                comboBoxPais2.Text = "Senegal";
+
+                comboBoxGrupo1.Text = "Grupo A";
+                comboBoxGrupo2.Text = "Grupo A";
+            }
+
+            if (ElegirPartido.SelectedIndex == 6) // PARTIDO [7] GRUPO B
+            {
+                pictureBoxPais1.Image = Resources.BanInglaterra;
+                pictureBoxPais2.Image = Resources.BanIràn; 
+
+                comboBoxPais1.Text = "Inglaterra";
+                comboBoxPais2.Text = "Irán";
+
+                comboBoxGrupo1.Text = "Grupo B";
+                comboBoxGrupo2.Text = "Grupo B";
+            }
+
+            if (ElegirPartido.SelectedIndex == 7) // PARTIDO [8] GRUPO B
+            {
+                pictureBoxPais1.Image = Resources.BanEEUU;
+                pictureBoxPais2.Image = Resources.BanGales;
+
+                comboBoxPais1.Text = "Estados Unidos";
+                comboBoxPais2.Text = "Gales"; 
+
+                comboBoxGrupo1.Text = "Grupo B";
+                comboBoxGrupo2.Text = "Grupo B";
+            }
+
+            if (ElegirPartido.SelectedIndex == 8) // PARTIDO [9] GRUPO B
+            {
+                pictureBoxPais1.Image = Resources.BanInglaterra;
+                pictureBoxPais2.Image = Resources.BanEEUU;
+
+                comboBoxPais1.Text = "Inglaterra";
+                comboBoxPais2.Text = "Estados Unidos";
+
+                comboBoxGrupo1.Text = "Grupo B";
+                comboBoxGrupo2.Text = "Grupo B";
+            }
+
+            if (ElegirPartido.SelectedIndex == 9) // PARTIDO [10] GRUPO B
+            {
+                pictureBoxPais1.Image = Resources.BanIràn;
+                pictureBoxPais2.Image = Resources.BanGales;
+
+                comboBoxPais1.Text = "Iran";
+                comboBoxPais2.Text = "Gales";
+
+                comboBoxGrupo1.Text = "Grupo B";
+                comboBoxGrupo2.Text = "Grupo B";
+            }
+
+            if (ElegirPartido.SelectedIndex == 10) // PARTIDO [11] GRUPO B
+            {
+                pictureBoxPais1.Image = Resources.BanInglaterra;
+                pictureBoxPais2.Image = Resources.BanGales;
+
+                comboBoxPais1.Text = "Inglaterra";
+                comboBoxPais2.Text = "Gales";
+
+                comboBoxGrupo1.Text = "Grupo B";
+                comboBoxGrupo2.Text = "Grupo B";
+            }
+
+            if (ElegirPartido.SelectedIndex == 11) // PARTIDO [12] GRUPO B
+            {
+                pictureBoxPais1.Image = Resources.BanInglaterra;
+                pictureBoxPais2.Image = Resources.BanGales;
+                 
+                comboBoxPais1.Text = "Inglaterra";
+                comboBoxPais2.Text = "Gales";
+
+                comboBoxGrupo1.Text = "Grupo B";
+                comboBoxGrupo2.Text = "Grupo B";
+            }
+
+            if (ElegirPartido.SelectedIndex == 12) // PARTIDO [13] GRUPO B
+            {
+                pictureBoxPais1.Image = Resources.BanIràn;
+                pictureBoxPais2.Image = Resources.BanEEUU;
+
+                comboBoxPais1.Text = "Irán";
+                comboBoxPais2.Text = "Estados Unidos";
+
+                comboBoxGrupo1.Text = "Grupo B";
+                comboBoxGrupo2.Text = "Grupo B";
+            }
+
+            if (ElegirPartido.SelectedIndex == 13) // PARTIDO [14] GRUPO C
+            {
+                pictureBoxPais1.Image = Resources.BanArgentina;
+                pictureBoxPais2.Image = Resources.BanArabiaSaudita;
+
+                comboBoxPais1.Text = "Argentina";
+                comboBoxPais2.Text = "Arabia Saudita";
+
+                comboBoxGrupo1.Text = "Grupo C";
+                comboBoxGrupo2.Text = "Grupo C";
+            }
+
+            if (ElegirPartido.SelectedIndex == 14) // PARTIDO [15] GRUPO C
+            {
+                pictureBoxPais1.Image = Resources.BanMex;
+                pictureBoxPais2.Image = Resources.BanPolonia;
+
+                comboBoxPais1.Text = "Mexico";
+                comboBoxPais2.Text = "Polonia";
+
+                comboBoxGrupo1.Text = "Grupo C";
+                comboBoxGrupo2.Text = "Grupo C";
+            }
         }
     }
 

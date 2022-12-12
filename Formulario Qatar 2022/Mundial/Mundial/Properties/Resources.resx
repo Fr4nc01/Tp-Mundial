@@ -187,14 +187,26 @@
   <data name="BanEEUU" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Banderas\BanEEUU.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BanCroacia" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Banderas\BanCroacia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BanPaisesBajos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Banderas\BanPaisesBajos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BanCoreaDelSur" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Banderas\BanCoreaDelSur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BanArabiaSaudita" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Banderas\BanArabiaSaudita.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BanIràn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Banderas\BanIràn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BanCamerun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Banderas\BanCamerun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BanJapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Banderas\BanJapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BanCostaRica" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Banderas\BanCostaRica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,16 +217,10 @@
   <data name="BanTunez" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Banderas\BanTunez.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BanCamerun" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Banderas\BanCamerun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FondoForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondoForm.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BanCoreaDelSur" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Banderas\BanCoreaDelSur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BanCroacia" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Banderas\BanCroacia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BanJapon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Banderas\BanJapon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FondoPasto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FondoPasto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
