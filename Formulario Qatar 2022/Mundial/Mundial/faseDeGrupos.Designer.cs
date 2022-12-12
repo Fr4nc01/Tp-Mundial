@@ -39,15 +39,10 @@ namespace Mundial
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(faseDeGrupos));
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnMostrar = new System.Windows.Forms.Button();
-            this.panelSeguroEliminar = new System.Windows.Forms.Panel();
-            this.btnEliminarNo = new System.Windows.Forms.Button();
-            this.btnEliminarSi = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnCargaDatos = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.BtnAyuda = new System.Windows.Forms.Button();
             this.panelAyuda = new System.Windows.Forms.Panel();
@@ -92,32 +87,27 @@ namespace Mundial
             this.btnConsultarFdG = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.txtGrupo1 = new System.Windows.Forms.Label();
-            this.comboBoxGrupo1 = new System.Windows.Forms.ComboBox();
-            this.txtPais1 = new System.Windows.Forms.Label();
-            this.comboBoxPais1 = new System.Windows.Forms.ComboBox();
-            this.pictureBoxPais1 = new System.Windows.Forms.PictureBox();
-            this.txtGrupo2 = new System.Windows.Forms.Label();
-            this.comboBoxGrupo2 = new System.Windows.Forms.ComboBox();
-            this.txtPais2 = new System.Windows.Forms.Label();
-            this.comboBoxPais2 = new System.Windows.Forms.ComboBox();
-            this.pictureBoxPais2 = new System.Windows.Forms.PictureBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.ElegirPartido = new System.Windows.Forms.ComboBox();
-            this.txtTa1 = new System.Windows.Forms.Label();
-            this.txtGoles1 = new System.Windows.Forms.Label();
-            this.cantTA1 = new System.Windows.Forms.TextBox();
-            this.txtTR1 = new System.Windows.Forms.Label();
-            this.cantTR1 = new System.Windows.Forms.TextBox();
-            this.cantGoles1 = new System.Windows.Forms.TextBox();
             this.txtTA2 = new System.Windows.Forms.Label();
             this.txtGoles2 = new System.Windows.Forms.Label();
             this.cantTA2 = new System.Windows.Forms.TextBox();
             this.txtTR2 = new System.Windows.Forms.Label();
             this.cantTR2 = new System.Windows.Forms.TextBox();
             this.cantGoles2 = new System.Windows.Forms.TextBox();
+            this.txtTa1 = new System.Windows.Forms.Label();
+            this.txtGoles1 = new System.Windows.Forms.Label();
+            this.cantTA1 = new System.Windows.Forms.TextBox();
+            this.txtTR1 = new System.Windows.Forms.Label();
+            this.cantTR1 = new System.Windows.Forms.TextBox();
+            this.cantGoles1 = new System.Windows.Forms.TextBox();
+            this.ElegirPartido = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtGrupo2 = new System.Windows.Forms.Label();
+            this.txtPais2 = new System.Windows.Forms.Label();
+            this.pictureBoxPais2 = new System.Windows.Forms.PictureBox();
+            this.txtGrupo1 = new System.Windows.Forms.Label();
+            this.txtPais1 = new System.Windows.Forms.Label();
+            this.pictureBoxPais1 = new System.Windows.Forms.PictureBox();
             this.tabPage1.SuspendLayout();
-            this.panelSeguroEliminar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelAyuda.SuspendLayout();
             this.groupBoxCarga.SuspendLayout();
@@ -126,8 +116,8 @@ namespace Mundial
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPais1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPais2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPais1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage1
@@ -135,12 +125,10 @@ namespace Mundial
             this.tabPage1.BackColor = System.Drawing.Color.Brown;
             this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
             this.tabPage1.Controls.Add(this.btnMostrar);
-            this.tabPage1.Controls.Add(this.panelSeguroEliminar);
             this.tabPage1.Controls.Add(this.btnVolver);
             this.tabPage1.Controls.Add(this.btnCargaDatos);
             this.tabPage1.Controls.Add(this.btnCargar);
-            this.tabPage1.Controls.Add(this.btnEliminar);
-            this.tabPage1.Controls.Add(this.btnModificar);
+            this.tabPage1.Controls.Add(this.btnConsultar);
             this.tabPage1.Controls.Add(this.pictureBox2);
             this.tabPage1.Controls.Add(this.BtnAyuda);
             this.tabPage1.Controls.Add(this.panelAyuda);
@@ -172,54 +160,6 @@ namespace Mundial
             this.btnMostrar.UseVisualStyleBackColor = false;
             this.btnMostrar.Visible = false;
             this.btnMostrar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panelSeguroEliminar
-            // 
-            this.panelSeguroEliminar.BackColor = System.Drawing.Color.DarkGray;
-            this.panelSeguroEliminar.Controls.Add(this.btnEliminarNo);
-            this.panelSeguroEliminar.Controls.Add(this.btnEliminarSi);
-            this.panelSeguroEliminar.Controls.Add(this.label19);
-            this.panelSeguroEliminar.Location = new System.Drawing.Point(340, 192);
-            this.panelSeguroEliminar.Name = "panelSeguroEliminar";
-            this.panelSeguroEliminar.Size = new System.Drawing.Size(293, 159);
-            this.panelSeguroEliminar.TabIndex = 15;
-            this.panelSeguroEliminar.Visible = false;
-            // 
-            // btnEliminarNo
-            // 
-            this.btnEliminarNo.BackColor = System.Drawing.Color.Transparent;
-            this.btnEliminarNo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarNo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminarNo.Location = new System.Drawing.Point(187, 81);
-            this.btnEliminarNo.Name = "btnEliminarNo";
-            this.btnEliminarNo.Size = new System.Drawing.Size(58, 31);
-            this.btnEliminarNo.TabIndex = 2;
-            this.btnEliminarNo.Text = "NO";
-            this.btnEliminarNo.UseVisualStyleBackColor = false;
-            this.btnEliminarNo.Click += new System.EventHandler(this.btnEliminarNo_Click);
-            // 
-            // btnEliminarSi
-            // 
-            this.btnEliminarSi.BackColor = System.Drawing.Color.Transparent;
-            this.btnEliminarSi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarSi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminarSi.Location = new System.Drawing.Point(43, 81);
-            this.btnEliminarSi.Name = "btnEliminarSi";
-            this.btnEliminarSi.Size = new System.Drawing.Size(58, 31);
-            this.btnEliminarSi.TabIndex = 1;
-            this.btnEliminarSi.Text = "SI";
-            this.btnEliminarSi.UseVisualStyleBackColor = false;
-            this.btnEliminarSi.Click += new System.EventHandler(this.btnEliminarSi_Click);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(71, 32);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(153, 24);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "¿Estas seguro?";
             // 
             // btnVolver
             // 
@@ -257,7 +197,7 @@ namespace Mundial
             this.btnCargar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargar.Location = new System.Drawing.Point(120, 340);
+            this.btnCargar.Location = new System.Drawing.Point(60, 386);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(296, 67);
             this.btnCargar.TabIndex = 13;
@@ -265,38 +205,25 @@ namespace Mundial
             this.btnCargar.UseVisualStyleBackColor = false;
             this.btnCargar.Click += new System.EventHandler(this.button4_Click);
             // 
-            // btnEliminar
+            // btnConsultar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(120, 413);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(296, 67);
-            this.btnEliminar.TabIndex = 12;
-            this.btnEliminar.Text = "CONSULTAR";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.Transparent;
-            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(120, 486);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(296, 67);
-            this.btnModificar.TabIndex = 11;
-            this.btnModificar.Text = "MODIFICAR";
-            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnConsultar.BackColor = System.Drawing.Color.Transparent;
+            this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.Location = new System.Drawing.Point(60, 459);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(296, 67);
+            this.btnConsultar.TabIndex = 12;
+            this.btnConsultar.Text = "CONSULTAR";
+            this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(381, 100);
+            this.pictureBox2.Location = new System.Drawing.Point(406, 118);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(145, 156);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -806,14 +733,10 @@ namespace Mundial
             this.tabPage3.Controls.Add(this.ElegirPartido);
             this.tabPage3.Controls.Add(this.label20);
             this.tabPage3.Controls.Add(this.txtGrupo2);
-            this.tabPage3.Controls.Add(this.comboBoxGrupo2);
             this.tabPage3.Controls.Add(this.txtPais2);
-            this.tabPage3.Controls.Add(this.comboBoxPais2);
             this.tabPage3.Controls.Add(this.pictureBoxPais2);
             this.tabPage3.Controls.Add(this.txtGrupo1);
-            this.tabPage3.Controls.Add(this.comboBoxGrupo1);
             this.tabPage3.Controls.Add(this.txtPais1);
-            this.tabPage3.Controls.Add(this.comboBoxPais1);
             this.tabPage3.Controls.Add(this.pictureBoxPais1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -822,275 +745,6 @@ namespace Mundial
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Partidos";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // txtGrupo1
-            // 
-            this.txtGrupo1.AutoSize = true;
-            this.txtGrupo1.BackColor = System.Drawing.Color.Transparent;
-            this.txtGrupo1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGrupo1.Location = new System.Drawing.Point(65, 257);
-            this.txtGrupo1.Name = "txtGrupo1";
-            this.txtGrupo1.Size = new System.Drawing.Size(82, 24);
-            this.txtGrupo1.TabIndex = 11;
-            this.txtGrupo1.Text = "grupo";
-            this.txtGrupo1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.txtGrupo1.Visible = false;
-            // 
-            // comboBoxGrupo1
-            // 
-            this.comboBoxGrupo1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxGrupo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxGrupo1.FormattingEnabled = true;
-            this.comboBoxGrupo1.Items.AddRange(new object[] {
-            "Grupo A",
-            "Grupo B",
-            "Grupo C",
-            "Grupo D",
-            "Grupo E",
-            "Grupo F",
-            "Grupo G",
-            "Grupo H"});
-            this.comboBoxGrupo1.Location = new System.Drawing.Point(69, 284);
-            this.comboBoxGrupo1.Name = "comboBoxGrupo1";
-            this.comboBoxGrupo1.Size = new System.Drawing.Size(313, 28);
-            this.comboBoxGrupo1.TabIndex = 10;
-            this.comboBoxGrupo1.Visible = false;
-            // 
-            // txtPais1
-            // 
-            this.txtPais1.AutoSize = true;
-            this.txtPais1.BackColor = System.Drawing.Color.Transparent;
-            this.txtPais1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPais1.Location = new System.Drawing.Point(65, 341);
-            this.txtPais1.Name = "txtPais1";
-            this.txtPais1.Size = new System.Drawing.Size(58, 24);
-            this.txtPais1.TabIndex = 9;
-            this.txtPais1.Text = "pais";
-            this.txtPais1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.txtPais1.Visible = false;
-            // 
-            // comboBoxPais1
-            // 
-            this.comboBoxPais1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxPais1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxPais1.FormattingEnabled = true;
-            this.comboBoxPais1.Items.AddRange(new object[] {
-            "Qatar",
-            "Ecuador",
-            "Senegal",
-            "Paises Bajos"});
-            this.comboBoxPais1.Location = new System.Drawing.Point(69, 368);
-            this.comboBoxPais1.Name = "comboBoxPais1";
-            this.comboBoxPais1.Size = new System.Drawing.Size(313, 28);
-            this.comboBoxPais1.TabIndex = 7;
-            this.comboBoxPais1.Visible = false;
-            // 
-            // pictureBoxPais1
-            // 
-            this.pictureBoxPais1.BackColor = System.Drawing.Color.Silver;
-            this.pictureBoxPais1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxPais1.Image = global::Mundial.Properties.Resources.bandera_blanca;
-            this.pictureBoxPais1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxPais1.InitialImage")));
-            this.pictureBoxPais1.Location = new System.Drawing.Point(69, 59);
-            this.pictureBoxPais1.Name = "pictureBoxPais1";
-            this.pictureBoxPais1.Size = new System.Drawing.Size(304, 180);
-            this.pictureBoxPais1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxPais1.TabIndex = 6;
-            this.pictureBoxPais1.TabStop = false;
-            this.pictureBoxPais1.Visible = false;
-            // 
-            // txtGrupo2
-            // 
-            this.txtGrupo2.AutoSize = true;
-            this.txtGrupo2.BackColor = System.Drawing.Color.Transparent;
-            this.txtGrupo2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGrupo2.Location = new System.Drawing.Point(666, 257);
-            this.txtGrupo2.Name = "txtGrupo2";
-            this.txtGrupo2.Size = new System.Drawing.Size(82, 24);
-            this.txtGrupo2.TabIndex = 17;
-            this.txtGrupo2.Text = "grupo";
-            this.txtGrupo2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.txtGrupo2.Visible = false;
-            // 
-            // comboBoxGrupo2
-            // 
-            this.comboBoxGrupo2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxGrupo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxGrupo2.FormattingEnabled = true;
-            this.comboBoxGrupo2.Items.AddRange(new object[] {
-            "Grupo A",
-            "Grupo B",
-            "Grupo C",
-            "Grupo D",
-            "Grupo E",
-            "Grupo F",
-            "Grupo G",
-            "Grupo H"});
-            this.comboBoxGrupo2.Location = new System.Drawing.Point(670, 284);
-            this.comboBoxGrupo2.Name = "comboBoxGrupo2";
-            this.comboBoxGrupo2.Size = new System.Drawing.Size(313, 28);
-            this.comboBoxGrupo2.TabIndex = 16;
-            this.comboBoxGrupo2.Visible = false;
-            // 
-            // txtPais2
-            // 
-            this.txtPais2.AutoSize = true;
-            this.txtPais2.BackColor = System.Drawing.Color.Transparent;
-            this.txtPais2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPais2.Location = new System.Drawing.Point(666, 341);
-            this.txtPais2.Name = "txtPais2";
-            this.txtPais2.Size = new System.Drawing.Size(58, 24);
-            this.txtPais2.TabIndex = 15;
-            this.txtPais2.Text = "pais";
-            this.txtPais2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.txtPais2.Visible = false;
-            // 
-            // comboBoxPais2
-            // 
-            this.comboBoxPais2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxPais2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxPais2.FormattingEnabled = true;
-            this.comboBoxPais2.Items.AddRange(new object[] {
-            "Qatar",
-            "Ecuador",
-            "Senegal",
-            "Paises Bajos"});
-            this.comboBoxPais2.Location = new System.Drawing.Point(670, 368);
-            this.comboBoxPais2.Name = "comboBoxPais2";
-            this.comboBoxPais2.Size = new System.Drawing.Size(313, 28);
-            this.comboBoxPais2.TabIndex = 13;
-            this.comboBoxPais2.Visible = false;
-            // 
-            // pictureBoxPais2
-            // 
-            this.pictureBoxPais2.BackColor = System.Drawing.Color.Silver;
-            this.pictureBoxPais2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBoxPais2.Image = global::Mundial.Properties.Resources.bandera_blanca;
-            this.pictureBoxPais2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxPais2.InitialImage")));
-            this.pictureBoxPais2.Location = new System.Drawing.Point(670, 59);
-            this.pictureBoxPais2.Name = "pictureBoxPais2";
-            this.pictureBoxPais2.Size = new System.Drawing.Size(304, 180);
-            this.pictureBoxPais2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxPais2.TabIndex = 12;
-            this.pictureBoxPais2.TabStop = false;
-            this.pictureBoxPais2.Visible = false;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(421, 138);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(123, 24);
-            this.label20.TabIndex = 18;
-            this.label20.Text = "PARTIDO:";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ElegirPartido
-            // 
-            this.ElegirPartido.FormattingEnabled = true;
-            this.ElegirPartido.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31",
-            "32"});
-            this.ElegirPartido.Location = new System.Drawing.Point(550, 138);
-            this.ElegirPartido.Name = "ElegirPartido";
-            this.ElegirPartido.Size = new System.Drawing.Size(86, 21);
-            this.ElegirPartido.TabIndex = 19;
-            this.ElegirPartido.SelectedIndexChanged += new System.EventHandler(this.comboBoxPartido_SelectedIndexChanged);
-            // 
-            // txtTa1
-            // 
-            this.txtTa1.AutoSize = true;
-            this.txtTa1.BackColor = System.Drawing.Color.Transparent;
-            this.txtTa1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTa1.Location = new System.Drawing.Point(202, 421);
-            this.txtTa1.Name = "txtTa1";
-            this.txtTa1.Size = new System.Drawing.Size(31, 20);
-            this.txtTa1.TabIndex = 25;
-            this.txtTa1.Text = "TA";
-            this.txtTa1.Visible = false;
-            // 
-            // txtGoles1
-            // 
-            this.txtGoles1.AutoSize = true;
-            this.txtGoles1.BackColor = System.Drawing.Color.Transparent;
-            this.txtGoles1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGoles1.Location = new System.Drawing.Point(100, 421);
-            this.txtGoles1.Name = "txtGoles1";
-            this.txtGoles1.Size = new System.Drawing.Size(23, 20);
-            this.txtGoles1.TabIndex = 23;
-            this.txtGoles1.Text = "G";
-            this.txtGoles1.Visible = false;
-            // 
-            // cantTA1
-            // 
-            this.cantTA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantTA1.Location = new System.Drawing.Point(186, 444);
-            this.cantTA1.Name = "cantTA1";
-            this.cantTA1.Size = new System.Drawing.Size(64, 22);
-            this.cantTA1.TabIndex = 22;
-            this.cantTA1.Visible = false;
-            // 
-            // txtTR1
-            // 
-            this.txtTR1.AutoSize = true;
-            this.txtTR1.BackColor = System.Drawing.Color.Transparent;
-            this.txtTR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTR1.Location = new System.Drawing.Point(308, 421);
-            this.txtTR1.Name = "txtTR1";
-            this.txtTR1.Size = new System.Drawing.Size(32, 20);
-            this.txtTR1.TabIndex = 24;
-            this.txtTR1.Text = "TR";
-            this.txtTR1.Visible = false;
-            // 
-            // cantTR1
-            // 
-            this.cantTR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantTR1.Location = new System.Drawing.Point(294, 444);
-            this.cantTR1.Name = "cantTR1";
-            this.cantTR1.Size = new System.Drawing.Size(64, 22);
-            this.cantTR1.TabIndex = 21;
-            this.cantTR1.Visible = false;
-            // 
-            // cantGoles1
-            // 
-            this.cantGoles1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cantGoles1.Location = new System.Drawing.Point(83, 444);
-            this.cantGoles1.Name = "cantGoles1";
-            this.cantGoles1.Size = new System.Drawing.Size(64, 22);
-            this.cantGoles1.TabIndex = 20;
-            this.cantGoles1.Visible = false;
             // 
             // txtTA2
             // 
@@ -1155,6 +809,219 @@ namespace Mundial
             this.cantGoles2.TabIndex = 26;
             this.cantGoles2.Visible = false;
             // 
+            // txtTa1
+            // 
+            this.txtTa1.AutoSize = true;
+            this.txtTa1.BackColor = System.Drawing.Color.Transparent;
+            this.txtTa1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTa1.Location = new System.Drawing.Point(202, 421);
+            this.txtTa1.Name = "txtTa1";
+            this.txtTa1.Size = new System.Drawing.Size(31, 20);
+            this.txtTa1.TabIndex = 25;
+            this.txtTa1.Text = "TA";
+            this.txtTa1.Visible = false;
+            // 
+            // txtGoles1
+            // 
+            this.txtGoles1.AutoSize = true;
+            this.txtGoles1.BackColor = System.Drawing.Color.Transparent;
+            this.txtGoles1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGoles1.Location = new System.Drawing.Point(100, 421);
+            this.txtGoles1.Name = "txtGoles1";
+            this.txtGoles1.Size = new System.Drawing.Size(23, 20);
+            this.txtGoles1.TabIndex = 23;
+            this.txtGoles1.Text = "G";
+            this.txtGoles1.Visible = false;
+            // 
+            // cantTA1
+            // 
+            this.cantTA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantTA1.Location = new System.Drawing.Point(186, 444);
+            this.cantTA1.Name = "cantTA1";
+            this.cantTA1.Size = new System.Drawing.Size(64, 22);
+            this.cantTA1.TabIndex = 22;
+            this.cantTA1.Visible = false;
+            // 
+            // txtTR1
+            // 
+            this.txtTR1.AutoSize = true;
+            this.txtTR1.BackColor = System.Drawing.Color.Transparent;
+            this.txtTR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTR1.Location = new System.Drawing.Point(308, 421);
+            this.txtTR1.Name = "txtTR1";
+            this.txtTR1.Size = new System.Drawing.Size(32, 20);
+            this.txtTR1.TabIndex = 24;
+            this.txtTR1.Text = "TR";
+            this.txtTR1.Visible = false;
+            // 
+            // cantTR1
+            // 
+            this.cantTR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantTR1.Location = new System.Drawing.Point(294, 444);
+            this.cantTR1.Name = "cantTR1";
+            this.cantTR1.Size = new System.Drawing.Size(64, 22);
+            this.cantTR1.TabIndex = 21;
+            this.cantTR1.Visible = false;
+            // 
+            // cantGoles1
+            // 
+            this.cantGoles1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantGoles1.Location = new System.Drawing.Point(83, 444);
+            this.cantGoles1.Name = "cantGoles1";
+            this.cantGoles1.Size = new System.Drawing.Size(64, 22);
+            this.cantGoles1.TabIndex = 20;
+            this.cantGoles1.Visible = false;
+            // 
+            // ElegirPartido
+            // 
+            this.ElegirPartido.FormattingEnabled = true;
+            this.ElegirPartido.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48"});
+            this.ElegirPartido.Location = new System.Drawing.Point(550, 138);
+            this.ElegirPartido.Name = "ElegirPartido";
+            this.ElegirPartido.Size = new System.Drawing.Size(86, 21);
+            this.ElegirPartido.TabIndex = 19;
+            this.ElegirPartido.SelectedIndexChanged += new System.EventHandler(this.comboBoxPartido_SelectedIndexChanged);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(421, 138);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(123, 24);
+            this.label20.TabIndex = 18;
+            this.label20.Text = "PARTIDO:";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtGrupo2
+            // 
+            this.txtGrupo2.AutoSize = true;
+            this.txtGrupo2.BackColor = System.Drawing.Color.Transparent;
+            this.txtGrupo2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGrupo2.Location = new System.Drawing.Point(765, 257);
+            this.txtGrupo2.Name = "txtGrupo2";
+            this.txtGrupo2.Size = new System.Drawing.Size(116, 33);
+            this.txtGrupo2.TabIndex = 17;
+            this.txtGrupo2.Text = "grupo";
+            this.txtGrupo2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtGrupo2.Visible = false;
+            // 
+            // txtPais2
+            // 
+            this.txtPais2.AutoSize = true;
+            this.txtPais2.BackColor = System.Drawing.Color.Transparent;
+            this.txtPais2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPais2.Location = new System.Drawing.Point(778, 315);
+            this.txtPais2.Name = "txtPais2";
+            this.txtPais2.Size = new System.Drawing.Size(80, 33);
+            this.txtPais2.TabIndex = 15;
+            this.txtPais2.Text = "pais";
+            this.txtPais2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtPais2.Visible = false;
+            // 
+            // pictureBoxPais2
+            // 
+            this.pictureBoxPais2.BackColor = System.Drawing.Color.Silver;
+            this.pictureBoxPais2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxPais2.Image = global::Mundial.Properties.Resources.bandera_blanca;
+            this.pictureBoxPais2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxPais2.InitialImage")));
+            this.pictureBoxPais2.Location = new System.Drawing.Point(670, 59);
+            this.pictureBoxPais2.Name = "pictureBoxPais2";
+            this.pictureBoxPais2.Size = new System.Drawing.Size(304, 180);
+            this.pictureBoxPais2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPais2.TabIndex = 12;
+            this.pictureBoxPais2.TabStop = false;
+            this.pictureBoxPais2.Visible = false;
+            // 
+            // txtGrupo1
+            // 
+            this.txtGrupo1.AutoSize = true;
+            this.txtGrupo1.BackColor = System.Drawing.Color.Transparent;
+            this.txtGrupo1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGrupo1.Location = new System.Drawing.Point(151, 257);
+            this.txtGrupo1.Name = "txtGrupo1";
+            this.txtGrupo1.Size = new System.Drawing.Size(116, 33);
+            this.txtGrupo1.TabIndex = 11;
+            this.txtGrupo1.Text = "grupo";
+            this.txtGrupo1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtGrupo1.Visible = false;
+            // 
+            // txtPais1
+            // 
+            this.txtPais1.AutoSize = true;
+            this.txtPais1.BackColor = System.Drawing.Color.Transparent;
+            this.txtPais1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPais1.Location = new System.Drawing.Point(170, 315);
+            this.txtPais1.Name = "txtPais1";
+            this.txtPais1.Size = new System.Drawing.Size(80, 33);
+            this.txtPais1.TabIndex = 9;
+            this.txtPais1.Text = "pais";
+            this.txtPais1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtPais1.Visible = false;
+            // 
+            // pictureBoxPais1
+            // 
+            this.pictureBoxPais1.BackColor = System.Drawing.Color.Silver;
+            this.pictureBoxPais1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBoxPais1.Image = global::Mundial.Properties.Resources.bandera_blanca;
+            this.pictureBoxPais1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxPais1.InitialImage")));
+            this.pictureBoxPais1.Location = new System.Drawing.Point(69, 59);
+            this.pictureBoxPais1.Name = "pictureBoxPais1";
+            this.pictureBoxPais1.Size = new System.Drawing.Size(304, 180);
+            this.pictureBoxPais1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPais1.TabIndex = 6;
+            this.pictureBoxPais1.TabStop = false;
+            this.pictureBoxPais1.Visible = false;
+            // 
             // faseDeGrupos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1171,8 +1038,6 @@ namespace Mundial
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.panelSeguroEliminar.ResumeLayout(false);
-            this.panelSeguroEliminar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelAyuda.ResumeLayout(false);
             this.panelAyuda.PerformLayout();
@@ -1184,8 +1049,8 @@ namespace Mundial
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPais1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPais2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPais1)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -1193,8 +1058,7 @@ namespace Mundial
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnCargaDatos;
         private System.Windows.Forms.Button btnCargar;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button BtnAyuda;
         private System.Windows.Forms.Panel panelAyuda;
@@ -1235,24 +1099,12 @@ namespace Mundial
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.TabControl ControlSection;
         public System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Panel panelSeguroEliminar;
-        private System.Windows.Forms.Button btnEliminarNo;
-        private System.Windows.Forms.Button btnEliminarSi;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnConsultarFdG;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Label txtGrupo1;
-        private System.Windows.Forms.ComboBox comboBoxGrupo1;
-        private System.Windows.Forms.Label txtPais1;
-        private System.Windows.Forms.ComboBox comboBoxPais1;
         private System.Windows.Forms.PictureBox pictureBoxPais1;
-        private System.Windows.Forms.Label txtGrupo2;
-        private System.Windows.Forms.ComboBox comboBoxGrupo2;
-        private System.Windows.Forms.Label txtPais2;
-        private System.Windows.Forms.ComboBox comboBoxPais2;
         private System.Windows.Forms.PictureBox pictureBoxPais2;
         private System.Windows.Forms.ComboBox ElegirPartido;
         private System.Windows.Forms.Label label20;
@@ -1268,5 +1120,9 @@ namespace Mundial
         private System.Windows.Forms.Label txtTR1;
         private System.Windows.Forms.TextBox cantTR1;
         private System.Windows.Forms.TextBox cantGoles1;
+        private System.Windows.Forms.Label txtGrupo2;
+        private System.Windows.Forms.Label txtPais2;
+        private System.Windows.Forms.Label txtGrupo1;
+        private System.Windows.Forms.Label txtPais1;
     }
 }
