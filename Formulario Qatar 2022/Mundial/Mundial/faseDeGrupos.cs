@@ -768,10 +768,10 @@ namespace Mundial
             if (ElegirPartido.SelectedIndex == 15) // PARTIDO [16] GRUPO G
             {
                 pictureBoxPais1.Image = Resources.BanBrasil;
-                pictureBoxPais2.Image = Resources.BanSuiza;
+                pictureBoxPais2.Image = Resources.BanSerbia;
 
                 txtPais1.Text = "Brasil";
-                txtPais2.Text = "Suiza";
+                txtPais2.Text = "Serbia";
 
                 txtFecha.Text = "28/11";
 
@@ -877,65 +877,7 @@ namespace Mundial
                 txtGrupo2.Text = "Grupo D";
             }
 
-            if (ElegirPartido.SelectedIndex == 4) // PARTIDO [5] GRUPO A
-            {
-                pictureBoxPais1.Image = Resources.BanQatar;
-                pictureBoxPais2.Image = Resources.BanPaisesBajos;
-
-                txtPais1.Text = "Qatar";
-                txtPais2.Text = "Paises Bajos";
-
-                txtFecha.Text = "29/11";
-
-                txtGrupo1.Text = "Grupo A";
-                txtGrupo2.Text = "Grupo A";
-            }
-
-            if (ElegirPartido.SelectedIndex == 5) // PARTIDO [6] GRUPO A
-            {
-                pictureBoxPais1.Image = Resources.BanEcuador;
-                pictureBoxPais2.Image = Resources.BanSenegal;
-
-                txtPais1.Text = "Ecuador";
-                txtPais2.Text = "Senegal";
-
-                txtFecha.Text = "29/11";
-
-                txtGrupo1.Text = "Grupo A";
-                txtGrupo2.Text = "Grupo A";
-            }
-
-            if (ElegirPartido.SelectedIndex == 10) // PARTIDO [11] GRUPO B
-            {
-                pictureBoxPais1.Image = Resources.BanInglaterra;
-                pictureBoxPais2.Image = Resources.BanGales;
-
-                txtPais1.Text = "Inglaterra";
-                txtPais2.Text = "Gales";
-
-                txtFecha.Text = "29/11";
-
-                txtGrupo1.Text = "Grupo B";
-                txtGrupo2.Text = "Grupo B";
-            }
-
-
-            if (ElegirPartido.SelectedIndex == 11) // PARTIDO [12] GRUPO B
-            {
-                pictureBoxPais1.Image = Resources.BanIràn;
-                pictureBoxPais2.Image = Resources.BanEEUU;
-
-                txtPais1.Text = "Irán";
-                txtPais2.Text = "Estados Unidos";
-
-                txtFecha.Text = "29/11";
-
-                txtGrupo1.Text = "Grupo B";
-                txtGrupo2.Text = "Grupo B";
-            }
-
- 
-            if (ElegirPartido.SelectedIndex == 14) // PARTIDO [15] GRUPO C
+            if (ElegirPartido.SelectedIndex == 23) // PARTIDO [24] GRUPO C
             {
                 pictureBoxPais1.Image = Resources.BanArgentina;
                 pictureBoxPais2.Image = Resources.BanMex;
@@ -949,53 +891,174 @@ namespace Mundial
                 txtGrupo2.Text = "Grupo C";
             }
 
-            
-
-            if (ElegirPartido.SelectedIndex == 16) // PARTIDO [17] GRUPO C
+            if (ElegirPartido.SelectedIndex == 24) // PARTIDO [25] GRUPO E
             {
-                pictureBoxPais1.Image = Resources.BanPolonia;
-                pictureBoxPais2.Image = Resources.BanArgentina;
+                pictureBoxPais1.Image = Resources.BanCostaRica;
+                pictureBoxPais2.Image = Resources.BanJapon;
 
-               txtPais1.Text = "Polonia";
-                txtPais2.Text = "Argentina";
+                txtPais1.Text = "Costa Rica";
+                txtPais2.Text = "Japon";
 
-                txtFecha.Text = "30/11";
+                txtFecha.Text = "27/11";
 
-                txtGrupo1.Text = "Grupo C";
-                txtGrupo2.Text = "Grupo C";
+                txtGrupo1.Text = "Grupo E";
+                txtGrupo2.Text = "Grupo E";
             }
 
-            if (ElegirPartido.SelectedIndex == 17) // PARTIDO [18] GRUPO C
+            if (ElegirPartido.SelectedIndex == 25) // PARTIDO [26] GRUPO F
             {
-                pictureBoxPais1.Image = Resources.BanArabiaSaudita;
-                pictureBoxPais2.Image = Resources.BanMex;
+                pictureBoxPais1.Image = Resources.BanBelgica;
+                pictureBoxPais2.Image = Resources.BanMarruecos;
 
-                txtPais1.Text = "Arabia Saudita";
-                txtPais2.Text = "Mexico";
+                txtPais1.Text = "Belgica";
+                txtPais2.Text = "Marruecos";
 
-                txtFecha.Text = "30/11";
+                txtFecha.Text = "27/11";
 
-                txtGrupo1.Text = "Grupo C";
-                txtGrupo2.Text = "Grupo C";
+                txtGrupo1.Text = "Grupo F";
+                txtGrupo2.Text = "Grupo F";
             }
 
-            
-
-            if (ElegirPartido.SelectedIndex == 22) // PARTIDO [23] GRUPO D
+            if (ElegirPartido.SelectedIndex == 26) // PARTIDO [27] GRUPO F
             {
-                pictureBoxPais1.Image = Resources.BanFrancia;
-                pictureBoxPais2.Image = Resources.BanTunez;
+                pictureBoxPais1.Image = Resources.BanCanada;
+                pictureBoxPais2.Image = Resources.BanCroacia;
 
-                txtPais1.Text = "Francia";
-                txtPais2.Text = "Tunez";
+                txtPais1.Text = "Canada";
+                txtPais2.Text = "Croacia";
 
-                txtFecha.Text = "30/11";
+                txtFecha.Text = "27/11";
 
-                txtGrupo1.Text = "Grupo D";
-                txtGrupo2.Text = "Grupo D";
+                txtGrupo1.Text = "Grupo F";
+                txtGrupo2.Text = "Grupo F";
             }
 
-            if (ElegirPartido.SelectedIndex == 23) // PARTIDO [24] GRUPO D
+            if (ElegirPartido.SelectedIndex == 27) // PARTIDO [28] GRUPO E
+            {
+                pictureBoxPais1.Image = Resources.BanEspaña;
+                pictureBoxPais2.Image = Resources.BanAlemania;
+
+                txtPais1.Text = "España";
+                txtPais2.Text = "Alemania";
+
+                txtFecha.Text = "27/11";
+
+                txtGrupo1.Text = "Grupo E";
+                txtGrupo2.Text = "Grupo E";
+            }
+
+            if (ElegirPartido.SelectedIndex == 28) // PARTIDO [29] GRUPO G
+            {
+                pictureBoxPais1.Image = Resources.BanSerbia;
+                pictureBoxPais2.Image = Resources.BanCamerun;
+
+                txtPais1.Text = "Serbia";
+                txtPais2.Text = "Camerun";
+                txtFecha.Text = "28/11";
+
+                txtGrupo1.Text = "Grupo G";
+                txtGrupo2.Text = "Grupo G";
+            }
+
+            if (ElegirPartido.SelectedIndex == 29) // PARTIDO [30] GRUPO H
+            {
+                pictureBoxPais1.Image = Resources.BanGhana;
+                pictureBoxPais2.Image = Resources.BanCoreaDelSur;
+
+                txtPais1.Text = "Ghana";
+                txtPais2.Text = "Corea del Sur";
+
+                txtFecha.Text = "28/11";
+
+                txtGrupo1.Text = "Grupo H";
+                txtGrupo2.Text = "Grupo H";
+            }
+
+            if (ElegirPartido.SelectedIndex == 30) // PARTIDO [31] GRUPO G
+            {
+                pictureBoxPais1.Image = Resources.BanBrasil;
+                pictureBoxPais2.Image = Resources.BanSuiza;
+
+                txtPais1.Text = "Brasil";
+                txtPais2.Text = "Suiza";
+
+                txtFecha.Text = "28/11";
+
+                txtGrupo1.Text = "Grupo G";
+                txtGrupo2.Text = "Grupo G";
+            }
+
+            if (ElegirPartido.SelectedIndex == 31) // PARTIDO [32] GRUPO H
+            {
+                pictureBoxPais1.Image = Resources.BanPortugal;
+                pictureBoxPais2.Image = Resources.BanUruguay;
+
+                txtPais1.Text = "Portugal";
+                txtPais2.Text = "Uruguay";
+
+                txtFecha.Text = "28/11";
+
+                txtGrupo1.Text = "Grupo H";
+                txtGrupo2.Text = "Grupo H";
+            }
+
+            if (ElegirPartido.SelectedIndex == 32) // PARTIDO [33] GRUPO A
+            {
+                pictureBoxPais1.Image = Resources.BanQatar;
+                pictureBoxPais2.Image = Resources.BanPaisesBajos;
+
+                txtPais1.Text = "Qatar";
+                txtPais2.Text = "Paises Bajos";
+
+                txtFecha.Text = "29/11";
+
+                txtGrupo1.Text = "Grupo A";
+                txtGrupo2.Text = "Grupo A";
+            }
+
+            if (ElegirPartido.SelectedIndex == 33) // PARTIDO [34] GRUPO A
+            {
+                pictureBoxPais1.Image = Resources.BanEcuador;
+                pictureBoxPais2.Image = Resources.BanSenegal;
+
+                txtPais1.Text = "Ecuador";
+                txtPais2.Text = "Senegal";
+
+                txtFecha.Text = "29/11";
+
+                txtGrupo1.Text = "Grupo A";
+                txtGrupo2.Text = "Grupo A";
+            }
+
+            if (ElegirPartido.SelectedIndex == 34) // PARTIDO [35] GRUPO B
+            {
+                pictureBoxPais1.Image = Resources.BanInglaterra;
+                pictureBoxPais2.Image = Resources.BanGales;
+
+                txtPais1.Text = "Inglaterra";
+                txtPais2.Text = "Gales";
+
+                txtFecha.Text = "29/11";
+
+                txtGrupo1.Text = "Grupo B";
+                txtGrupo2.Text = "Grupo B";
+            }
+
+            if (ElegirPartido.SelectedIndex == 35) // PARTIDO [36] GRUPO B
+            {
+                pictureBoxPais1.Image = Resources.BanIràn;
+                pictureBoxPais2.Image = Resources.BanEEUU;
+
+                txtPais1.Text = "Irán";
+                txtPais2.Text = "Estados Unidos";
+
+                txtFecha.Text = "29/11";
+
+                txtGrupo1.Text = "Grupo B";
+                txtGrupo2.Text = "Grupo B";
+            }
+
+            if (ElegirPartido.SelectedIndex == 36) // PARTIDO [37] GRUPO D
             {
                 pictureBoxPais1.Image = Resources.BanAustralia;
                 pictureBoxPais2.Image = Resources.BanDinamarca;
@@ -1009,37 +1072,77 @@ namespace Mundial
                 txtGrupo2.Text = "Grupo D";
             }
 
-            
-
-            if (ElegirPartido.SelectedIndex == 26) // PARTIDO [27] GRUPO E
+            if (ElegirPartido.SelectedIndex == 37) // PARTIDO [38] GRUPO D
             {
-                pictureBoxPais1.Image = Resources.BanEspaña;
-                pictureBoxPais2.Image = Resources.BanAlemania;
+                pictureBoxPais1.Image = Resources.BanFrancia;
+                pictureBoxPais2.Image = Resources.BanTunez;
 
-                txtPais1.Text = "España";
-                txtPais2.Text = "Alemania";
+                txtPais1.Text = "Francia";
+                txtPais2.Text = "Tunez";
 
-                txtFecha.Text = "27/11";
+                txtFecha.Text = "30/11";
 
-                txtGrupo1.Text = "Grupo E";
-                txtGrupo2.Text = "Grupo E";
+                txtGrupo1.Text = "Grupo D";
+                txtGrupo2.Text = "Grupo D";
             }
 
-            if (ElegirPartido.SelectedIndex == 27) // PARTIDO [28] GRUPO E
+            if (ElegirPartido.SelectedIndex == 38) // PARTIDO [39] GRUPO C
             {
-                pictureBoxPais1.Image = Resources.BanCostaRica;
-                pictureBoxPais2.Image = Resources.BanJapon;
+                pictureBoxPais1.Image = Resources.BanPolonia;
+                pictureBoxPais2.Image = Resources.BanArgentina;
 
-                txtPais1.Text = "Costa Rica";
-                txtPais2.Text = "Japon";
+               txtPais1.Text = "Polonia";
+                txtPais2.Text = "Argentina";
 
-                txtFecha.Text = "27/11";
+                txtFecha.Text = "30/11";
 
-                txtGrupo1.Text = "Grupo E";
-                txtGrupo2.Text = "Grupo E";
+                txtGrupo1.Text = "Grupo C";
+                txtGrupo2.Text = "Grupo C";
             }
 
-            if (ElegirPartido.SelectedIndex == 28) // PARTIDO [29] GRUPO E
+            if (ElegirPartido.SelectedIndex == 39) // PARTIDO [40] GRUPO C
+            {
+                pictureBoxPais1.Image = Resources.BanArabiaSaudita;
+                pictureBoxPais2.Image = Resources.BanMex;
+
+                txtPais1.Text = "Arabia Saudita";
+                txtPais2.Text = "Mexico";
+
+                txtFecha.Text = "30/11";
+
+                txtGrupo1.Text = "Grupo C";
+                txtGrupo2.Text = "Grupo C";
+            }
+
+            if (ElegirPartido.SelectedIndex == 40) // PARTIDO [41] GRUPO F
+            {
+                pictureBoxPais1.Image = Resources.BanBelgica;
+                pictureBoxPais2.Image = Resources.BanCroacia;
+
+                txtPais1.Text = "Belgica";
+                txtPais2.Text = "Croacia";
+
+                txtFecha.Text = "1/12";
+
+                txtGrupo1.Text = "Grupo F";
+                txtGrupo2.Text = "Grupo F";
+            }
+
+            if (ElegirPartido.SelectedIndex == 41) // PARTIDO [42] GRUPO F
+            {
+                pictureBoxPais1.Image = Resources.BanCanada;
+                pictureBoxPais2.Image = Resources.BanMarruecos;
+
+                txtPais1.Text = "Canada";
+                txtPais2.Text = "Marruecos";
+
+                txtFecha.Text = "1/12";
+
+                txtGrupo1.Text = "Grupo F";
+                txtGrupo2.Text = "Grupo F";
+            }
+
+            if (ElegirPartido.SelectedIndex == 42) // PARTIDO [43] GRUPO E
             {
                 pictureBoxPais1.Image = Resources.BanEspaña;
                 pictureBoxPais2.Image = Resources.BanJapon;
@@ -1053,7 +1156,7 @@ namespace Mundial
                 txtGrupo2.Text = "Grupo E";
             }
 
-            if (ElegirPartido.SelectedIndex == 29) // PARTIDO [30] GRUPO E
+            if (ElegirPartido.SelectedIndex == 43) // PARTIDO [44] GRUPO E
             {
                 pictureBoxPais1.Image = Resources.BanCostaRica;
                 pictureBoxPais2.Image = Resources.BanAlemania;
@@ -1067,110 +1170,35 @@ namespace Mundial
                 txtGrupo2.Text = "Grupo E";
             }
 
-            
-
-            if (ElegirPartido.SelectedIndex == 32) // PARTIDO [33] GRUPO F
+            if (ElegirPartido.SelectedIndex == 44) // PARTIDO [45] GRUPO H
             {
-                pictureBoxPais1.Image = Resources.BanBelgica;
-                pictureBoxPais2.Image = Resources.BanMarruecos;
+                pictureBoxPais1.Image = Resources.BanGhana;
+                pictureBoxPais2.Image = Resources.BanUruguay;
 
-                txtPais1.Text = "Belgica";
-                txtPais2.Text = "Marruecos";
-
-                txtFecha.Text = "27/11";
-
-                txtGrupo1.Text = "Grupo F";
-                txtGrupo2.Text = "Grupo F";
-            }
-
-            if (ElegirPartido.SelectedIndex == 33) // PARTIDO [34] GRUPO F
-            {
-                pictureBoxPais1.Image = Resources.BanCanada;
-                pictureBoxPais2.Image = Resources.BanCroacia;
-
-                txtPais1.Text = "Canada";
-                txtPais2.Text = "Croacia";
-
-                txtFecha.Text = "27/11";
-
-                txtGrupo1.Text = "Grupo F";
-                txtGrupo2.Text = "Grupo F";
-            }
-
-            if (ElegirPartido.SelectedIndex == 34) // PARTIDO [35] GRUPO F
-            {
-                pictureBoxPais1.Image = Resources.BanBelgica;
-                pictureBoxPais2.Image = Resources.BanCroacia;
-
-                txtPais1.Text = "Belgica";
-                txtPais2.Text = "Croacia";
-
-                txtFecha.Text = "1/12";
-
-                txtGrupo1.Text = "Grupo F";
-                txtGrupo2.Text = "Grupo F";
-            }
-
-            if (ElegirPartido.SelectedIndex == 35) // PARTIDO [36] GRUPO F
-            {
-                pictureBoxPais1.Image = Resources.BanCanada;
-                pictureBoxPais2.Image = Resources.BanMarruecos;
-
-                txtPais1.Text = "Canada";
-                txtPais2.Text = "Marruecos";
-
-                txtFecha.Text = "1/12";
-
-                txtGrupo1.Text = "Grupo F";
-                txtGrupo2.Text = "Grupo F";
-            }
-
-            if (ElegirPartido.SelectedIndex == 36) // PARTIDO [37] GRUPO G
-            {
-                pictureBoxPais1.Image = Resources.BanBrasil;
-                pictureBoxPais2.Image = Resources.BanSerbia;
-
-                txtPais1.Text = "Brasil";
-                txtPais2.Text = "Serbia";
-
-                txtFecha.Text = "24/11";
-
-                txtGrupo1.Text = "Grupo G";
-                txtGrupo2.Text = "Grupo G";
-            }
-
-            
-
-            
-
-            if (ElegirPartido.SelectedIndex == 39) // PARTIDO [40] GRUPO G
-            {
-                pictureBoxPais1.Image = Resources.BanSerbia;
-                pictureBoxPais2.Image = Resources.BanCamerun;
-
-                txtPais1.Text = "Serbia";
-                txtPais2.Text = "Camerun";
-                txtFecha.Text = "28/11";
-
-                txtGrupo1.Text = "Grupo G";
-                txtGrupo2.Text = "Grupo G";
-            }
-
-            if (ElegirPartido.SelectedIndex == 40) // PARTIDO [41] GRUPO G
-            {
-                pictureBoxPais1.Image = Resources.BanBrasil;
-                pictureBoxPais2.Image = Resources.BanCamerun;
-
-               txtPais1.Text = "Brasil";
-                txtPais2.Text = "Camerun";
+                txtPais1.Text = "Ghana";
+                txtPais2.Text = "Uruguay";
 
                 txtFecha.Text = "2/12";
 
-                txtGrupo1.Text = "Grupo G";
-                txtGrupo2.Text = "Grupo G";
+                txtGrupo1.Text = "Grupo H";
+                txtGrupo2.Text = "Grupo H";
             }
 
-            if (ElegirPartido.SelectedIndex == 41) // PARTIDO [42] GRUPO G
+            if (ElegirPartido.SelectedIndex == 45) // PARTIDO [46] GRUPO H
+            {
+                pictureBoxPais1.Image = Resources.BanPortugal;
+                pictureBoxPais2.Image = Resources.BanCoreaDelSur;
+
+                txtPais1.Text = "Portugal";
+                txtPais2.Text = "Corea del Sur";
+
+                txtFecha.Text = "2/12";
+
+                txtGrupo1.Text = "Grupo H";
+                txtGrupo2.Text = "Grupo H";
+            }
+
+            if (ElegirPartido.SelectedIndex == 46) // PARTIDO [47] GRUPO G
             {
                 pictureBoxPais1.Image = Resources.BanSerbia;
                 pictureBoxPais2.Image = Resources.BanSuiza;
@@ -1184,63 +1212,21 @@ namespace Mundial
                 txtGrupo2.Text = "Grupo G";
             }
 
-            
-
-            if (ElegirPartido.SelectedIndex == 44) // PARTIDO [45] GRUPO H
+            if (ElegirPartido.SelectedIndex == 47) // PARTIDO [48] GRUPO G
             {
-                pictureBoxPais1.Image = Resources.BanPortugal;
-                pictureBoxPais2.Image = Resources.BanUruguay;
+                pictureBoxPais1.Image = Resources.BanSerbia;
+                pictureBoxPais2.Image = Resources.BanSuiza;
 
-                txtPais1.Text = "Portugal";
-                txtPais2.Text = "Uruguay";
-
-                txtFecha.Text = "28/11";
-
-                txtGrupo1.Text = "Grupo H";
-                txtGrupo2.Text = "Grupo H";
-            }
-
-            if (ElegirPartido.SelectedIndex == 45) // PARTIDO [46] GRUPO H
-            {
-                pictureBoxPais1.Image = Resources.BanGhana;
-                pictureBoxPais2.Image = Resources.BanCoreaDelSur;
-
-                txtPais1.Text = "Ghana";
-                txtPais2.Text = "Corea del Sur";
-
-                txtFecha.Text = "28/11";
-
-                txtGrupo1.Text = "Grupo H";
-                txtGrupo2.Text = "Grupo H";
-            }
-
-            if (ElegirPartido.SelectedIndex == 46) // PARTIDO [47] GRUPO H
-            {
-                pictureBoxPais1.Image = Resources.BanPortugal;
-                pictureBoxPais2.Image = Resources.BanCoreaDelSur;
-
-                txtPais1.Text = "Portugal";
-                txtPais2.Text = "Corea del Sur";
+                txtPais1.Text = "Serbia";
+                txtPais2.Text = "Suiza";
 
                 txtFecha.Text = "2/12";
 
-                txtGrupo1.Text = "Grupo H";
-                txtGrupo2.Text = "Grupo H";
+                txtGrupo1.Text = "Grupo G";
+                txtGrupo2.Text = "Grupo G";
             }
 
-            if (ElegirPartido.SelectedIndex == 47) // PARTIDO [48] GRUPO H
-            {
-                pictureBoxPais1.Image = Resources.BanGhana;
-                pictureBoxPais2.Image = Resources.BanUruguay;
-
-                txtPais1.Text = "Ghana";
-                txtPais2.Text = "Uruguay";
-
-                txtFecha.Text = "2/12";
-
-                txtGrupo1.Text = "Grupo H";
-                txtGrupo2.Text = "Grupo H";
-            }
+        
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
