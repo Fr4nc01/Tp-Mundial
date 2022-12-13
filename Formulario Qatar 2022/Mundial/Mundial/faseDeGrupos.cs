@@ -397,7 +397,6 @@ namespace Mundial
         {
             btnMostrar.Visible = true;
             BtnAyuda.Visible = true;
-            btnCargaDatos.Visible = true;
             groupBoxCarga.Visible = true;
             btnCargar.Visible = false;
             btnConsultar.Visible = false;
@@ -407,7 +406,6 @@ namespace Mundial
         private void btnVolver_Click(object sender, EventArgs e)
         {
             BtnAyuda.Visible = false;
-            btnCargaDatos.Visible = false;
             groupBoxCarga.Visible = false;
             btnCargar.Visible = true;
             btnConsultar.Visible = true;
@@ -415,7 +413,7 @@ namespace Mundial
             btnMostrar.Visible =false;
         }
 
-        private void btnCargaDatos_Click(object sender, EventArgs e) 
+        private void btnCargaDatos_Click(object sender, EventArgs e)
         {
             BtnAyuda.Visible = false;
             btnCargaDatos.Visible = false;
@@ -425,15 +423,15 @@ namespace Mundial
             btnVolver.Visible = false;
             btnMostrar.Visible = false;
 
-            if (consultado == false)
-            {
-                MessageBox.Show("consulte su pais antes de cargar.");
-            }
-
+            /*  if (consultado == false)
+              {
+                  MessageBox.Show("consulte su pais antes de cargar.");
+              }*/
+            //para el equipo1 tiene que estar en un boton 
             try
             {
-                Partido partido = new Partido();
-
+                Partido partido = crudPartidos.consultar_pais(id_equipos);
+                CargarEquipo1();
                 partido.Cant_partidos = Convert.ToInt32(txtPartJugado.Text.Trim());
                 partido.T_amarilla1 = Convert.ToInt32(txtTAmarilla.Text.Trim());
                 partido.T_rojas1 = Convert.ToInt32(txtTRojas.Text.Trim());
@@ -444,7 +442,7 @@ namespace Mundial
                 partido.Cant_goles_a_favor = Convert.ToInt32(txtGolesAfavor.Text.Trim());
                 partido.Cant_goles_en_contra = Convert.ToInt32(txtGolesEnContra.Text.Trim());
 
-                if (crudPartidos.actualizar(partido))
+                if (crudPartidos.actualizar())
                 {
                     //llenamos el grid y limpiamos
                     llenarGrid();
@@ -458,14 +456,47 @@ namespace Mundial
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Error: "+ex);
+                MessageBox.Show("Error: " + ex);
+            }
+            //para el equipo2 esto tiene que estar en otro boton
+            try
+            {
+                Partido partido = crudPartidos.consultar_pais(id_equipos);
+                CargarEquipo2();
+                partido.Cant_partidos = Convert.ToInt32(txtPartJugado.Text.Trim());
+                partido.T_amarilla1 = Convert.ToInt32(txtTAmarilla.Text.Trim());
+                partido.T_rojas1 = Convert.ToInt32(txtTRojas.Text.Trim());
+                partido.Partidos_ganados = Convert.ToInt32(txtPartidosGanados.Text.Trim());
+                partido.Partidos_perdidos = Convert.ToInt32(txtPerdidos.Text.Trim());
+                partido.Partidos_empatados = Convert.ToInt32(txtEmpate.Text.Trim());
+                partido.Dif_goles = Convert.ToInt32(txtDifGoles.Text.Trim());
+                partido.Cant_goles_a_favor = Convert.ToInt32(txtGolesAfavor.Text.Trim());
+                partido.Cant_goles_en_contra = Convert.ToInt32(txtGolesEnContra.Text.Trim());
+
+                if (crudPartidos.actualizar())
+                {
+                    //llenamos el grid y limpiamos
+                    llenarGrid();
+                    limpiarCampos();
+                    MessageBox.Show("Datos guardados.");
+                    consultado = false; //
+                }
+                else
+                {
+                    MessageBox.Show("No se puedo guardar los datos.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
             }
 
         }
 
-        
+
 
         private void button1_Click(object sender, EventArgs e) // MOSTRAR
         { 
@@ -517,7 +548,7 @@ namespace Mundial
             txtTAmarilla.Text = "";
             txtTRojas.Text = "";
             txtDifGoles.Text = "";
-          
+
         }
 
         private void comboBoxPartido_SelectedIndexChanged(object sender, EventArgs e)
@@ -1233,6 +1264,92 @@ namespace Mundial
         {
             ControlSection.SelectedIndex = 1;
         }
-    }
 
+
+        public static void CargarEquipo1()
+        {
+            Partido partido = new Partido();
+            //para el equipo1
+
+            /*  if (txtRes_eq_uno < txtRes_eq_dos) //cuando pierde
+                  {
+                  partido.Cant_partidos = +1;
+
+                  partido.Partidos_ganados = 0;
+                  partido.Partidos_perdidos = +1;
+                  partido.Partidos_empatados = 0;
+                  partido.Puntos = 0;
+                  partido.Dif_goles = txtresultado1 - txtresultado2;
+                  partido.Cant_goles_a_favor = txtresultado1//aca va el txt 
+                  partido.Cant_goles_en_contra = txtresultado2//
+
+              }
+              else //cuando gana
+              {
+                  partido.Cant_partidos = +1;
+
+                  partido.Partidos_ganados = 1;
+                  partido.Partidos_perdidos = 0;
+                  partido.Partidos_empatados = 0;
+                  partido.Puntos = +3;
+                  partido.Dif_goles = txtresultado1 - txtresultado2;
+                  partido.Cant_goles_a_favor = txtresultado1//aca va el txt 
+                  partido.Cant_goles_en_contra = txtresultado2//
+              }
+              if (txtRes_eq_uno == txtRes_eq_dos) //cuando empata
+              {
+                  partido.Cant_partidos = +1;
+
+                  partido.Partidos_ganados = 0;
+                  partido.Partidos_perdidos = 0;
+                  partido.Partidos_empatados = 1;
+                  partido.Puntos = 1;
+                  partido.Dif_goles = txtresultado1 - txtresultado2;
+                  partido.Cant_goles_a_favor = txtresultado1//aca va el txt 
+                  partido.Cant_goles_en_contra = txtresultado2//
+              }
+
+          }
+          public void CargarEquipo2()
+          {
+              Partido partido = new Partido();
+              //para el equipo2
+              if (partido.Res_eq_dos < partido.Res_eq_uno)
+              {
+                  partido.Cant_partidos ++;
+
+                  partido.Partidos_ganados = 0;
+                  partido.Partidos_perdidos ++;
+                  partido.Partidos_empatados = 0;
+                  partido.Puntos = 0;
+                  //partido.Dif_goles = txtresultado1 - txtresultado2;
+                  //partido.Cant_goles_a_favor = txtresultado1//aca va el txt 
+                  //partido.Cant_goles_en_contra = txtresultado2//
+              }
+              else //cuando gana
+              {
+                  partido.Cant_partidos ++;
+
+                  partido.Partidos_ganados ++;
+                  partido.Partidos_perdidos = 0;
+                  partido.Partidos_empatados = 0;
+                  partido.Puntos +=3;
+                  //partido.Dif_goles = txtresultado1 - txtresultado2;
+                  //partido.Cant_goles_a_favor = txtresultado1//aca va el txt 
+                  //partido.Cant_goles_en_contra = txtresultado2//
+              }
+              if (partido.Res_eq_uno == partido.Res_eq_dos)
+              {
+                  partido.Cant_partidos ++;
+
+                  partido.Partidos_ganados = 0;
+                  partido.Partidos_perdidos = 0;
+                  partido.Partidos_empatados ++;
+                  partido.Puntos ++;
+                  //partido.Dif_goles = txtresultado1 - txtresultado2;
+                  //partido.Cant_goles_a_favor = txtresultado1//aca va el txt 
+                  //partido.Cant_goles_en_contra = txtresultado2//
+              }*/
+        }
+    }
 }

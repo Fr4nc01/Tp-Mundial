@@ -40,7 +40,6 @@ namespace Mundial
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.btnCargaDatos = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -87,6 +86,8 @@ namespace Mundial
             this.btnConsultarFdG = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnCargaEqUno = new System.Windows.Forms.Button();
+            this.btnCargaEqDos = new System.Windows.Forms.Button();
             this.txtTA2 = new System.Windows.Forms.Label();
             this.txtGoles2 = new System.Windows.Forms.Label();
             this.cantTA2 = new System.Windows.Forms.TextBox();
@@ -128,7 +129,6 @@ namespace Mundial
             this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
             this.tabPage1.Controls.Add(this.btnMostrar);
             this.tabPage1.Controls.Add(this.btnVolver);
-            this.tabPage1.Controls.Add(this.btnCargaDatos);
             this.tabPage1.Controls.Add(this.btnCargar);
             this.tabPage1.Controls.Add(this.btnConsultar);
             this.tabPage1.Controls.Add(this.pictureBox2);
@@ -154,7 +154,7 @@ namespace Mundial
             this.btnMostrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrar.Location = new System.Drawing.Point(816, 310);
+            this.btnMostrar.Location = new System.Drawing.Point(737, 310);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(145, 35);
             this.btnMostrar.TabIndex = 16;
@@ -177,21 +177,6 @@ namespace Mundial
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Visible = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
-            // btnCargaDatos
-            // 
-            this.btnCargaDatos.BackColor = System.Drawing.Color.Transparent;
-            this.btnCargaDatos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCargaDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCargaDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargaDatos.Location = new System.Drawing.Point(642, 310);
-            this.btnCargaDatos.Name = "btnCargaDatos";
-            this.btnCargaDatos.Size = new System.Drawing.Size(145, 35);
-            this.btnCargaDatos.TabIndex = 5;
-            this.btnCargaDatos.Text = "CARGA";
-            this.btnCargaDatos.UseVisualStyleBackColor = false;
-            this.btnCargaDatos.Visible = false;
-            this.btnCargaDatos.Click += new System.EventHandler(this.btnCargaDatos_Click);
             // 
             // btnCargar
             // 
@@ -720,12 +705,17 @@ namespace Mundial
             // tabPage3
             // 
             this.tabPage3.BackgroundImage = global::Mundial.Properties.Resources.FondoPasto;
+<<<<<<< HEAD
+            this.tabPage3.Controls.Add(this.btnCargaEqUno);
+            this.tabPage3.Controls.Add(this.btnCargaEqDos);
+=======
             this.tabPage3.Controls.Add(this.txtFecha);
             this.tabPage3.Controls.Add(this.lbFecha);
             this.tabPage3.Controls.Add(this.txtPais2);
             this.tabPage3.Controls.Add(this.txtGrupo2);
             this.tabPage3.Controls.Add(this.txtGrupo1);
             this.tabPage3.Controls.Add(this.txtPais1);
+>>>>>>> 2e5f141feac8ab9b547ce2206325ddd9d3a4fbd6
             this.tabPage3.Controls.Add(this.txtTA2);
             this.tabPage3.Controls.Add(this.txtGoles2);
             this.tabPage3.Controls.Add(this.cantTA2);
@@ -749,6 +739,36 @@ namespace Mundial
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Partidos";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btnCargaEqUno
+            // 
+            this.btnCargaEqUno.BackColor = System.Drawing.Color.Transparent;
+            this.btnCargaEqUno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCargaEqUno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargaEqUno.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargaEqUno.Location = new System.Drawing.Point(104, 494);
+            this.btnCargaEqUno.Name = "btnCargaEqUno";
+            this.btnCargaEqUno.Size = new System.Drawing.Size(249, 35);
+            this.btnCargaEqUno.TabIndex = 35;
+            this.btnCargaEqUno.Text = "CARGA EQUIPO 1";
+            this.btnCargaEqUno.UseVisualStyleBackColor = false;
+            this.btnCargaEqUno.Visible = false;
+            this.btnCargaEqUno.Click += new System.EventHandler(this.btnCargaEqUno_Click);
+            // 
+            // btnCargaEqDos
+            // 
+            this.btnCargaEqDos.BackColor = System.Drawing.Color.Transparent;
+            this.btnCargaEqDos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCargaEqDos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargaEqDos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargaEqDos.Location = new System.Drawing.Point(702, 494);
+            this.btnCargaEqDos.Name = "btnCargaEqDos";
+            this.btnCargaEqDos.Size = new System.Drawing.Size(249, 35);
+            this.btnCargaEqDos.TabIndex = 33;
+            this.btnCargaEqDos.Text = "CARGA EQUIPO 2";
+            this.btnCargaEqDos.UseVisualStyleBackColor = false;
+            this.btnCargaEqDos.Visible = false;
+            this.btnCargaEqDos.Click += new System.EventHandler(this.btnCargaEqDos_Click);
             // 
             // txtTA2
             // 
@@ -1081,7 +1101,6 @@ namespace Mundial
 		}
         public System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.Button btnCargaDatos;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -1145,11 +1164,20 @@ namespace Mundial
         private System.Windows.Forms.Label txtTR1;
         private System.Windows.Forms.TextBox cantTR1;
         private System.Windows.Forms.TextBox cantGoles1;
+<<<<<<< HEAD
+        private System.Windows.Forms.Label txtGrupo2;
+        private System.Windows.Forms.Label txtPais2;
+        private System.Windows.Forms.Label txtGrupo1;
+        private System.Windows.Forms.Label txtPais1;
+        private System.Windows.Forms.Button btnCargaEqDos;
+        private System.Windows.Forms.Button btnCargaEqUno;
+=======
         private System.Windows.Forms.TextBox txtPais1;
         private System.Windows.Forms.TextBox txtPais2;
         private System.Windows.Forms.TextBox txtGrupo1;
         public System.Windows.Forms.TextBox txtGrupo2;
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label lbFecha;
+>>>>>>> 2e5f141feac8ab9b547ce2206325ddd9d3a4fbd6
     }
 }

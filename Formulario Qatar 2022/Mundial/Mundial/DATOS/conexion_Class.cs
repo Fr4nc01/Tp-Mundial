@@ -16,7 +16,7 @@ namespace Mundial.DATOS
         public conexion_Class() //constructor 
         {
 
-            conexion = new SqlConnection("server=.\\SQLEXPRESS ; database=bbdd_mundial ; integrated security=true");//arreglar aqui
+            conexion = new SqlConnection("server=.\\SQLEXPRESS ; database=TP_Mundial ; integrated security=true");//arreglar aqui
 
         }
 
