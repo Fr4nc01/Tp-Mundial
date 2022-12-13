@@ -14,11 +14,12 @@ namespace Mundial.DATOS
     {
         
 
-        public static bool actualizar(Partido p)
+        public static bool actualizar() //tabla de equipos modificar
         {
 
             try
-            {                
+            {
+                Partido p = new Partido();
                 conexion_Class con = new conexion_Class();
                 string sql = "update equipos set cant_partidos = "+p.Cant_partidos+", T_amarilla = "+p.T_amarilla1+", T_rojas = "+p.T_rojas1+", partidos_ganados = "+p.Partidos_ganados+", partidos_perdidos = "+p.Partidos_perdidos+", partidos_empatados = "+p.Partidos_empatados+","+
                 "puntos = "+p.Puntos+", dif_goles = "+p.Dif_goles+", cant_goles_a_favor = "+p.Cant_goles_a_favor+", cant_goles_en_contra = "+p.Cant_goles_en_contra+"   where id_equipos = '"+p.Id_equipos+"'";
@@ -49,7 +50,39 @@ namespace Mundial.DATOS
            
 
         }
+        public static bool InsertarPartidos(Partido p) //tabla de partidos modificar
+        {
 
+            try
+            {
+                conexion_Class con = new conexion_Class();
+                string sql = "update partidos set res_eq_uno= " + p.Res_eq_uno + ", res_eq_dos  = " + p.Res_eq_dos + ", tar_amarilla_eq_uno = " + p.Tar_amarilla_eq_uno + ", tar_amarilla_eq_dos = " + p.Tar_amarilla_eq_dos + ", tar_roja_eq_uno = " + p.Tar_roja_eq_uno + ", tar_roja_eq_dos = " + p.Tar_roja_eq_dos+ "," + "   where id_partido = '" + p.Id_partido+ "'"; //fiajrse el tema de la FK
+
+                SqlCommand comando = new SqlCommand(sql, con.Conectar());
+
+                int cantidad = comando.ExecuteNonQuery();
+
+                if (cantidad == 1)
+                {
+                    con.desconectar();
+                    return true;
+
+                }
+                else
+                {
+                    con.desconectar();
+                    return false;
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+
+        }
         public static Partido consultar_pais(string id_equipos)
         {
 
@@ -102,7 +135,7 @@ namespace Mundial.DATOS
             }
             
 
-        }
+        } //esta consulta se hace en base a la tabla todo ok
 
         public static DataTable posiciones()
         {
@@ -129,8 +162,13 @@ namespace Mundial.DATOS
             
 
 
-        }
+        }  //POSICIONES EN LA TABLA DE EQUIPOS
 
+        
+
+
+
+        }
 
     }
 }

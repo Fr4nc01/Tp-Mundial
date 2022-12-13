@@ -13,41 +13,41 @@ using System.Runtime.Versioning;
 
 namespace Mundial
 {
-	/// <summary>
-	/// Description of MainForm.
-	/// </summary>
-	public partial class faseDeGrupos : Form
-	{
-        public string id_equipos ="";
+    /// <summary>
+    /// Description of MainForm.
+    /// </summary>
+    public partial class faseDeGrupos : Form
+    {
+        public string id_equipos = "";
 
 
-		public faseDeGrupos()
-		{
-			InitializeComponent();
-            lbPais.Text = "";			
-			
-		}
+        public faseDeGrupos()
+        {
+            InitializeComponent();
+            lbPais.Text = "";
+
+        }
         bool consultado = false;
         private void MainForm_Load(object sender, EventArgs e)
         {
             llenarGrid();
         }
 
-		private void ElegirGrupo_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			if (ElegirGrupo.SelectedIndex == 0) // GRUPO A
+        private void ElegirGrupo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ElegirGrupo.SelectedIndex == 0) // GRUPO A
             {
-				ElegirPais.Items.Clear();
-				ElegirPais.Items.Add("Qatar");
+                ElegirPais.Items.Clear();
+                ElegirPais.Items.Add("Qatar");
                 ElegirPais.Items.Add("Ecuador");
                 ElegirPais.Items.Add("Senegal");
                 ElegirPais.Items.Add("Paises Bajos");
                 pictureBox1.Image = Resources.bandera_blanca;
                 lbPais.Text = "";
                 lbSpais.Visible = true;
-				ElegirPais.Visible = true;
-			}
-			if (ElegirGrupo.SelectedIndex == 1) // GRUPO B
+                ElegirPais.Visible = true;
+            }
+            if (ElegirGrupo.SelectedIndex == 1) // GRUPO B
             {
                 ElegirPais.Items.Clear();
                 ElegirPais.Items.Add("Inglaterra");
@@ -57,8 +57,8 @@ namespace Mundial
                 pictureBox1.Image = Resources.bandera_blanca;
                 lbPais.Text = "";
                 lbSpais.Visible = true;
-				ElegirPais.Visible = true;
-			}
+                ElegirPais.Visible = true;
+            }
             if (ElegirGrupo.SelectedIndex == 2) // GRUPO C
             {
                 ElegirPais.Items.Clear();
@@ -412,10 +412,10 @@ namespace Mundial
             btnCargar.Visible = true;
             btnConsultar.Visible = true;
             btnVolver.Visible = false;
-            btnMostrar.Visible =false;
+            btnMostrar.Visible = false;
         }
 
-        private void btnCargaDatos_Click(object sender, EventArgs e) 
+        private void btnCargaDatos_Click(object sender, EventArgs e)
         {
             BtnAyuda.Visible = false;
             btnCargaDatos.Visible = false;
@@ -425,15 +425,15 @@ namespace Mundial
             btnVolver.Visible = false;
             btnMostrar.Visible = false;
 
-            if (consultado == false)
-            {
-                MessageBox.Show("consulte su pais antes de cargar.");
-            }
-
+            /*  if (consultado == false)
+              {
+                  MessageBox.Show("consulte su pais antes de cargar.");
+              }*/
+            //para el equipo1 tiene que estar en un boton 
             try
             {
-                Partido partido = new Partido();
-
+                Partido partido = crudPartidos.consultar_pais(id_equipos);
+                CargarEquipo1();
                 partido.Cant_partidos = Convert.ToInt32(txtPartJugado.Text.Trim());
                 partido.T_amarilla1 = Convert.ToInt32(txtTAmarilla.Text.Trim());
                 partido.T_rojas1 = Convert.ToInt32(txtTRojas.Text.Trim());
@@ -444,7 +444,7 @@ namespace Mundial
                 partido.Cant_goles_a_favor = Convert.ToInt32(txtGolesAfavor.Text.Trim());
                 partido.Cant_goles_en_contra = Convert.ToInt32(txtGolesEnContra.Text.Trim());
 
-                if (crudPartidos.actualizar(partido))
+                if (crudPartidos.actualizar())
                 {
                     //llenamos el grid y limpiamos
                     llenarGrid();
@@ -458,17 +458,50 @@ namespace Mundial
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Error: "+ex);
+                MessageBox.Show("Error: " + ex);
+            }
+            //para el equipo2 esto tiene que estar en otro boton
+            try
+            {
+                Partido partido = crudPartidos.consultar_pais(id_equipos);
+                CargarEquipo2();
+                partido.Cant_partidos = Convert.ToInt32(txtPartJugado.Text.Trim());
+                partido.T_amarilla1 = Convert.ToInt32(txtTAmarilla.Text.Trim());
+                partido.T_rojas1 = Convert.ToInt32(txtTRojas.Text.Trim());
+                partido.Partidos_ganados = Convert.ToInt32(txtPartidosGanados.Text.Trim());
+                partido.Partidos_perdidos = Convert.ToInt32(txtPerdidos.Text.Trim());
+                partido.Partidos_empatados = Convert.ToInt32(txtEmpate.Text.Trim());
+                partido.Dif_goles = Convert.ToInt32(txtDifGoles.Text.Trim());
+                partido.Cant_goles_a_favor = Convert.ToInt32(txtGolesAfavor.Text.Trim());
+                partido.Cant_goles_en_contra = Convert.ToInt32(txtGolesEnContra.Text.Trim());
+
+                if (crudPartidos.actualizar())
+                {
+                    //llenamos el grid y limpiamos
+                    llenarGrid();
+                    limpiarCampos();
+                    MessageBox.Show("Datos guardados.");
+                    consultado = false; //
+                }
+                else
+                {
+                    MessageBox.Show("No se puedo guardar los datos.");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex);
             }
 
         }
 
-        
+
 
         private void button1_Click(object sender, EventArgs e) // MOSTRAR
-        { 
+        {
             Partido partido = crudPartidos.consultar_pais(id_equipos);
 
             if (partido == null)
@@ -488,7 +521,7 @@ namespace Mundial
                 txtDifGoles.Text = partido.Dif_goles.ToString();
                 txtGolesAfavor.Text = partido.Cant_goles_a_favor.ToString();
                 txtGolesEnContra.Text = partido.Cant_goles_en_contra.ToString();
-                consultado= true;
+                consultado = true;
 
             }
 
@@ -496,15 +529,15 @@ namespace Mundial
 
         private void llenarGrid()
         {
-                DataTable datos = crudPartidos.posiciones();
-                if (datos == null)
-                {
-                    MessageBox.Show("No se logro generar la tabla");
-                }
-                else
-                {
-                    dataGridView1.DataSource = datos.DefaultView; //retorna a una lista el default es la vista por defecto de la base
-                }
+            DataTable datos = crudPartidos.posiciones();
+            if (datos == null)
+            {
+                MessageBox.Show("No se logro generar la tabla");
+            }
+            else
+            {
+                dataGridView1.DataSource = datos.DefaultView; //retorna a una lista el default es la vista por defecto de la base
+            }
         }
         private void limpiarCampos()
         {
@@ -517,7 +550,7 @@ namespace Mundial
             txtTAmarilla.Text = "";
             txtTRojas.Text = "";
             txtDifGoles.Text = "";
-          
+
         }
 
         private void comboBoxPartido_SelectedIndexChanged(object sender, EventArgs e)
@@ -549,13 +582,13 @@ namespace Mundial
 
             cantGoles1.Visible = true;
             cantGoles2.Visible = true;
-            cantTA1.Visible= true;
-            cantTA2.Visible= true;
-            cantTR1.Visible= true;
+            cantTA1.Visible = true;
+            cantTA2.Visible = true;
+            cantTR1.Visible = true;
             cantTR2.Visible = true;
 
 
-            if(ElegirPartido.SelectedIndex == 0) // PARTIDO [1] GRUPO A
+            if (ElegirPartido.SelectedIndex == 0) // PARTIDO [1] GRUPO A
             {
                 pictureBoxPais1.Image = Resources.BanQatar;
                 pictureBoxPais2.Image = Resources.BanEcuador;
@@ -769,7 +802,7 @@ namespace Mundial
             if (ElegirPartido.SelectedIndex == 15) // PARTIDO [16] GRUPO C
             {
                 pictureBoxPais1.Image = Resources.BanArabiaSaudita;
-                pictureBoxPais2.Image = Resources.BanPolonia; 
+                pictureBoxPais2.Image = Resources.BanPolonia;
 
                 txtPais1.Text = "Arabia Saudita";
                 txtPais2.Text = "Polonia";
@@ -777,7 +810,7 @@ namespace Mundial
                 txtFecha.Text = "26/11";
 
                 txtGrupo1.Text = "Grupo C";
-                txtGrupo2.Text = "Grupo C"; 
+                txtGrupo2.Text = "Grupo C";
             }
 
             if (ElegirPartido.SelectedIndex == 16) // PARTIDO [17] GRUPO C
@@ -785,7 +818,7 @@ namespace Mundial
                 pictureBoxPais1.Image = Resources.BanPolonia;
                 pictureBoxPais2.Image = Resources.BanArgentina;
 
-               txtPais1.Text = "Polonia";
+                txtPais1.Text = "Polonia";
                 txtPais2.Text = "Argentina";
 
                 txtFecha.Text = "30/11";
@@ -952,7 +985,7 @@ namespace Mundial
             {
                 pictureBoxPais1.Image = Resources.BanEspaña;
                 pictureBoxPais2.Image = Resources.BanJapon;
-    
+
                 txtPais1.Text = "España";
                 txtPais2.Text = "Japon";
 
@@ -1120,7 +1153,7 @@ namespace Mundial
                 pictureBoxPais1.Image = Resources.BanBrasil;
                 pictureBoxPais2.Image = Resources.BanCamerun;
 
-               txtPais1.Text = "Brasil";
+                txtPais1.Text = "Brasil";
                 txtPais2.Text = "Camerun";
 
                 txtFecha.Text = "2/12";
@@ -1134,7 +1167,7 @@ namespace Mundial
                 pictureBoxPais1.Image = Resources.BanSerbia;
                 pictureBoxPais2.Image = Resources.BanSuiza;
 
-               txtPais1.Text = "Serbia";
+                txtPais1.Text = "Serbia";
                 txtPais2.Text = "Suiza";
 
                 txtFecha.Text = "2/12";
@@ -1232,6 +1265,92 @@ namespace Mundial
         {
             ControlSection.SelectedIndex = 1;
         }
-    }
 
+
+        public static void CargarEquipo1()
+        {
+            Partido partido = new Partido();
+            //para el equipo1
+
+            /*  if (txtRes_eq_uno < txtRes_eq_dos) //cuando pierde
+                  {
+                  partido.Cant_partidos = +1;
+
+                  partido.Partidos_ganados = 0;
+                  partido.Partidos_perdidos = +1;
+                  partido.Partidos_empatados = 0;
+                  partido.Puntos = 0;
+                  partido.Dif_goles = txtresultado1 - txtresultado2;
+                  partido.Cant_goles_a_favor = txtresultado1//aca va el txt 
+                  partido.Cant_goles_en_contra = txtresultado2//
+
+              }
+              else //cuando gana
+              {
+                  partido.Cant_partidos = +1;
+
+                  partido.Partidos_ganados = 1;
+                  partido.Partidos_perdidos = 0;
+                  partido.Partidos_empatados = 0;
+                  partido.Puntos = +3;
+                  partido.Dif_goles = txtresultado1 - txtresultado2;
+                  partido.Cant_goles_a_favor = txtresultado1//aca va el txt 
+                  partido.Cant_goles_en_contra = txtresultado2//
+              }
+              if (txtRes_eq_uno == txtRes_eq_dos) //cuando empata
+              {
+                  partido.Cant_partidos = +1;
+
+                  partido.Partidos_ganados = 0;
+                  partido.Partidos_perdidos = 0;
+                  partido.Partidos_empatados = 1;
+                  partido.Puntos = 1;
+                  partido.Dif_goles = txtresultado1 - txtresultado2;
+                  partido.Cant_goles_a_favor = txtresultado1//aca va el txt 
+                  partido.Cant_goles_en_contra = txtresultado2//
+              }
+
+          }
+          public void CargarEquipo2()
+          {
+              Partido partido = new Partido();
+              //para el equipo2
+              if (partido.Res_eq_dos < partido.Res_eq_uno)
+              {
+                  partido.Cant_partidos ++;
+
+                  partido.Partidos_ganados = 0;
+                  partido.Partidos_perdidos ++;
+                  partido.Partidos_empatados = 0;
+                  partido.Puntos = 0;
+                  //partido.Dif_goles = txtresultado1 - txtresultado2;
+                  //partido.Cant_goles_a_favor = txtresultado1//aca va el txt 
+                  //partido.Cant_goles_en_contra = txtresultado2//
+              }
+              else //cuando gana
+              {
+                  partido.Cant_partidos ++;
+
+                  partido.Partidos_ganados ++;
+                  partido.Partidos_perdidos = 0;
+                  partido.Partidos_empatados = 0;
+                  partido.Puntos +=3;
+                  //partido.Dif_goles = txtresultado1 - txtresultado2;
+                  //partido.Cant_goles_a_favor = txtresultado1//aca va el txt 
+                  //partido.Cant_goles_en_contra = txtresultado2//
+              }
+              if (partido.Res_eq_uno == partido.Res_eq_dos)
+              {
+                  partido.Cant_partidos ++;
+
+                  partido.Partidos_ganados = 0;
+                  partido.Partidos_perdidos = 0;
+                  partido.Partidos_empatados ++;
+                  partido.Puntos ++;
+                  //partido.Dif_goles = txtresultado1 - txtresultado2;
+                  //partido.Cant_goles_a_favor = txtresultado1//aca va el txt 
+                  //partido.Cant_goles_en_contra = txtresultado2//
+              }*/
+        }
+    }
 }
