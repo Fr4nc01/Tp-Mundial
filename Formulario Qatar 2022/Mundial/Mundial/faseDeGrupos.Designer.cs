@@ -101,12 +101,14 @@ namespace Mundial
             this.cantGoles1 = new System.Windows.Forms.TextBox();
             this.ElegirPartido = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.txtGrupo2 = new System.Windows.Forms.Label();
-            this.txtPais2 = new System.Windows.Forms.Label();
             this.pictureBoxPais2 = new System.Windows.Forms.PictureBox();
-            this.txtGrupo1 = new System.Windows.Forms.Label();
-            this.txtPais1 = new System.Windows.Forms.Label();
             this.pictureBoxPais1 = new System.Windows.Forms.PictureBox();
+            this.txtPais1 = new System.Windows.Forms.TextBox();
+            this.txtGrupo1 = new System.Windows.Forms.TextBox();
+            this.txtGrupo2 = new System.Windows.Forms.TextBox();
+            this.txtPais2 = new System.Windows.Forms.TextBox();
+            this.lbFecha = new System.Windows.Forms.Label();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelAyuda.SuspendLayout();
@@ -718,6 +720,12 @@ namespace Mundial
             // tabPage3
             // 
             this.tabPage3.BackgroundImage = global::Mundial.Properties.Resources.FondoPasto;
+            this.tabPage3.Controls.Add(this.txtFecha);
+            this.tabPage3.Controls.Add(this.lbFecha);
+            this.tabPage3.Controls.Add(this.txtPais2);
+            this.tabPage3.Controls.Add(this.txtGrupo2);
+            this.tabPage3.Controls.Add(this.txtGrupo1);
+            this.tabPage3.Controls.Add(this.txtPais1);
             this.tabPage3.Controls.Add(this.txtTA2);
             this.tabPage3.Controls.Add(this.txtGoles2);
             this.tabPage3.Controls.Add(this.cantTA2);
@@ -732,11 +740,7 @@ namespace Mundial
             this.tabPage3.Controls.Add(this.cantGoles1);
             this.tabPage3.Controls.Add(this.ElegirPartido);
             this.tabPage3.Controls.Add(this.label20);
-            this.tabPage3.Controls.Add(this.txtGrupo2);
-            this.tabPage3.Controls.Add(this.txtPais2);
             this.tabPage3.Controls.Add(this.pictureBoxPais2);
-            this.tabPage3.Controls.Add(this.txtGrupo1);
-            this.tabPage3.Controls.Add(this.txtPais1);
             this.tabPage3.Controls.Add(this.pictureBoxPais1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -942,32 +946,6 @@ namespace Mundial
             this.label20.Text = "PARTIDO:";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtGrupo2
-            // 
-            this.txtGrupo2.AutoSize = true;
-            this.txtGrupo2.BackColor = System.Drawing.Color.Transparent;
-            this.txtGrupo2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGrupo2.Location = new System.Drawing.Point(765, 257);
-            this.txtGrupo2.Name = "txtGrupo2";
-            this.txtGrupo2.Size = new System.Drawing.Size(116, 33);
-            this.txtGrupo2.TabIndex = 17;
-            this.txtGrupo2.Text = "grupo";
-            this.txtGrupo2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.txtGrupo2.Visible = false;
-            // 
-            // txtPais2
-            // 
-            this.txtPais2.AutoSize = true;
-            this.txtPais2.BackColor = System.Drawing.Color.Transparent;
-            this.txtPais2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPais2.Location = new System.Drawing.Point(778, 315);
-            this.txtPais2.Name = "txtPais2";
-            this.txtPais2.Size = new System.Drawing.Size(80, 33);
-            this.txtPais2.TabIndex = 15;
-            this.txtPais2.Text = "pais";
-            this.txtPais2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.txtPais2.Visible = false;
-            // 
             // pictureBoxPais2
             // 
             this.pictureBoxPais2.BackColor = System.Drawing.Color.Silver;
@@ -982,32 +960,6 @@ namespace Mundial
             this.pictureBoxPais2.TabStop = false;
             this.pictureBoxPais2.Visible = false;
             // 
-            // txtGrupo1
-            // 
-            this.txtGrupo1.AutoSize = true;
-            this.txtGrupo1.BackColor = System.Drawing.Color.Transparent;
-            this.txtGrupo1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGrupo1.Location = new System.Drawing.Point(151, 257);
-            this.txtGrupo1.Name = "txtGrupo1";
-            this.txtGrupo1.Size = new System.Drawing.Size(116, 33);
-            this.txtGrupo1.TabIndex = 11;
-            this.txtGrupo1.Text = "grupo";
-            this.txtGrupo1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.txtGrupo1.Visible = false;
-            // 
-            // txtPais1
-            // 
-            this.txtPais1.AutoSize = true;
-            this.txtPais1.BackColor = System.Drawing.Color.Transparent;
-            this.txtPais1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPais1.Location = new System.Drawing.Point(170, 315);
-            this.txtPais1.Name = "txtPais1";
-            this.txtPais1.Size = new System.Drawing.Size(80, 33);
-            this.txtPais1.TabIndex = 9;
-            this.txtPais1.Text = "pais";
-            this.txtPais1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.txtPais1.Visible = false;
-            // 
             // pictureBoxPais1
             // 
             this.pictureBoxPais1.BackColor = System.Drawing.Color.Silver;
@@ -1021,6 +973,79 @@ namespace Mundial
             this.pictureBoxPais1.TabIndex = 6;
             this.pictureBoxPais1.TabStop = false;
             this.pictureBoxPais1.Visible = false;
+            // 
+            // txtPais1
+            // 
+            this.txtPais1.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPais1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPais1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPais1.Location = new System.Drawing.Point(83, 315);
+            this.txtPais1.Name = "txtPais1";
+            this.txtPais1.Size = new System.Drawing.Size(275, 31);
+            this.txtPais1.TabIndex = 32;
+            this.txtPais1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPais1.Visible = false;
+            // 
+            // txtGrupo1
+            // 
+            this.txtGrupo1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGrupo1.Font = new System.Drawing.Font("Copperplate Gothic Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGrupo1.Location = new System.Drawing.Point(140, 256);
+            this.txtGrupo1.Name = "txtGrupo1";
+            this.txtGrupo1.Size = new System.Drawing.Size(169, 31);
+            this.txtGrupo1.TabIndex = 33;
+            this.txtGrupo1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGrupo1.Visible = false;
+            // 
+            // txtGrupo2
+            // 
+            this.txtGrupo2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGrupo2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGrupo2.Location = new System.Drawing.Point(738, 256);
+            this.txtGrupo2.Name = "txtGrupo2";
+            this.txtGrupo2.Size = new System.Drawing.Size(169, 31);
+            this.txtGrupo2.TabIndex = 34;
+            this.txtGrupo2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtGrupo2.Visible = false;
+            // 
+            // txtPais2
+            // 
+            this.txtPais2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPais2.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPais2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPais2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPais2.Location = new System.Drawing.Point(681, 315);
+            this.txtPais2.Name = "txtPais2";
+            this.txtPais2.Size = new System.Drawing.Size(275, 31);
+            this.txtPais2.TabIndex = 35;
+            this.txtPais2.Text = "Argentina";
+            this.txtPais2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPais2.Visible = false;
+            // 
+            // lbFecha
+            // 
+            this.lbFecha.AutoSize = true;
+            this.lbFecha.BackColor = System.Drawing.Color.Transparent;
+            this.lbFecha.Font = new System.Drawing.Font("Copperplate Gothic Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFecha.Location = new System.Drawing.Point(421, 230);
+            this.lbFecha.Name = "lbFecha";
+            this.lbFecha.Size = new System.Drawing.Size(100, 24);
+            this.lbFecha.TabIndex = 36;
+            this.lbFecha.Text = "FECHA:";
+            this.lbFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbFecha.Visible = false;
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Enabled = false;
+            this.txtFecha.Font = new System.Drawing.Font("Copperplate Gothic Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFecha.Location = new System.Drawing.Point(527, 233);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(64, 22);
+            this.txtFecha.TabIndex = 37;
+            this.txtFecha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtFecha.Visible = false;
             // 
             // faseDeGrupos
             // 
@@ -1120,9 +1145,11 @@ namespace Mundial
         private System.Windows.Forms.Label txtTR1;
         private System.Windows.Forms.TextBox cantTR1;
         private System.Windows.Forms.TextBox cantGoles1;
-        private System.Windows.Forms.Label txtGrupo2;
-        private System.Windows.Forms.Label txtPais2;
-        private System.Windows.Forms.Label txtGrupo1;
-        private System.Windows.Forms.Label txtPais1;
+        private System.Windows.Forms.TextBox txtPais1;
+        private System.Windows.Forms.TextBox txtPais2;
+        private System.Windows.Forms.TextBox txtGrupo1;
+        public System.Windows.Forms.TextBox txtGrupo2;
+        private System.Windows.Forms.TextBox txtFecha;
+        private System.Windows.Forms.Label lbFecha;
     }
 }

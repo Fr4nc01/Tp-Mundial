@@ -526,14 +526,19 @@ namespace Mundial
             pictureBoxPais2.Visible = true;
 
             txtGrupo1.Visible = true;
+            txtGrupo1.Enabled = false;
 
             txtGrupo2.Visible = true;
+            txtGrupo2.Enabled = false;
 
             txtPais1.Visible = true;
+            txtPais1.Enabled = false;
 
             txtPais2.Visible = true;
+            txtPais2.Enabled = false;
 
-
+            lbFecha.Visible= true;
+            txtFecha.Visible = true;
 
             txtGoles1.Visible = true;
             txtGoles2.Visible = true;
@@ -558,6 +563,8 @@ namespace Mundial
                 txtPais1.Text = "Qatar";
                 txtPais2.Text = "Ecuador";
 
+                txtFecha.Text = "20/11";
+
                 txtGrupo1.Text = "Grupo A";
                 txtGrupo2.Text = "Grupo A";
             }
@@ -569,6 +576,8 @@ namespace Mundial
 
                 txtPais1.Text = "Senegal";
                 txtPais2.Text = "Paises Bajos";
+
+                txtFecha.Text = "21/11";
 
                 txtGrupo1.Text = "Grupo A";
                 txtGrupo2.Text = "Grupo A";
@@ -582,6 +591,8 @@ namespace Mundial
                 txtPais1.Text = "Qatar";
                 txtPais2.Text = "Senegal";
 
+                txtFecha.Text = "25/11";
+
                 txtGrupo1.Text = "Grupo A";
                 txtGrupo2.Text = "Grupo A";
             }
@@ -593,6 +604,8 @@ namespace Mundial
 
                 txtPais1.Text = "Paises Bajos";
                 txtPais2.Text = "Ecuador";
+
+                txtFecha.Text = "25/11";
 
                 txtGrupo1.Text = "Grupo A";
                 txtGrupo2.Text = "Grupo A";
@@ -606,6 +619,8 @@ namespace Mundial
                 txtPais1.Text = "Qatar";
                 txtPais2.Text = "Paises Bajos";
 
+                txtFecha.Text = "29/11";
+
                 txtGrupo1.Text = "Grupo A";
                 txtGrupo2.Text = "Grupo A";
             }
@@ -617,6 +632,8 @@ namespace Mundial
 
                 txtPais1.Text = "Ecuador";
                 txtPais2.Text = "Senegal";
+
+                txtFecha.Text = "29/11";
 
                 txtGrupo1.Text = "Grupo A";
                 txtGrupo2.Text = "Grupo A";
@@ -630,6 +647,8 @@ namespace Mundial
                 txtPais1.Text = "Inglaterra";
                 txtPais2.Text = "Irán";
 
+                txtFecha.Text = "21/11";
+
                 txtGrupo1.Text = "Grupo B";
                 txtGrupo2.Text = "Grupo B";
             }
@@ -641,6 +660,8 @@ namespace Mundial
 
                 txtPais1.Text = "Estados Unidos";
                 txtPais2.Text = "Gales";
+
+                txtFecha.Text = "21/11";
 
                 txtGrupo1.Text = "Grupo B";
                 txtGrupo2.Text = "Grupo B";
@@ -654,6 +675,8 @@ namespace Mundial
                 txtPais1.Text = "Inglaterra";
                 txtPais2.Text = "Estados Unidos";
 
+                txtFecha.Text = "25/11";
+
                 txtGrupo1.Text = "Grupo B";
                 txtGrupo2.Text = "Grupo B";
             }
@@ -666,6 +689,8 @@ namespace Mundial
                 txtPais1.Text = "Iran";
                 txtPais2.Text = "Gales";
 
+                txtFecha.Text = "25/11";
+
                 txtGrupo1.Text = "Grupo B";
                 txtGrupo2.Text = "Grupo B";
             }
@@ -677,6 +702,8 @@ namespace Mundial
 
                 txtPais1.Text = "Inglaterra";
                 txtPais2.Text = "Gales";
+
+                txtFecha.Text = "29/11";
 
                 txtGrupo1.Text = "Grupo B";
                 txtGrupo2.Text = "Grupo B";
@@ -691,6 +718,8 @@ namespace Mundial
                 txtPais1.Text = "Irán";
                 txtPais2.Text = "Estados Unidos";
 
+                txtFecha.Text = "29/11";
+
                 txtGrupo1.Text = "Grupo B";
                 txtGrupo2.Text = "Grupo B";
             }
@@ -702,6 +731,8 @@ namespace Mundial
 
                 txtPais1.Text = "Argentina";
                 txtPais2.Text = "Arabia Saudita";
+
+                txtFecha.Text = "22/11";
 
                 txtGrupo1.Text = "Grupo C";
                 txtGrupo2.Text = "Grupo C";
@@ -715,6 +746,8 @@ namespace Mundial
                 txtPais1.Text = "Mexico";
                 txtPais2.Text = "Polonia";
 
+                txtFecha.Text = "22/11";
+
                 txtGrupo1.Text = "Grupo C";
                 txtGrupo2.Text = "Grupo C";
             }
@@ -726,6 +759,8 @@ namespace Mundial
 
                 txtPais1.Text = "Argentina";
                 txtPais2.Text = "Mexico";
+
+                txtFecha.Text = "26/11";
 
                 txtGrupo1.Text = "Grupo C";
                 txtGrupo2.Text = "Grupo C";
@@ -739,6 +774,8 @@ namespace Mundial
                 txtPais1.Text = "Arabia Saudita";
                 txtPais2.Text = "Polonia";
 
+                txtFecha.Text = "26/11";
+
                 txtGrupo1.Text = "Grupo C";
                 txtGrupo2.Text = "Grupo C"; 
             }
@@ -750,6 +787,8 @@ namespace Mundial
 
                txtPais1.Text = "Polonia";
                 txtPais2.Text = "Argentina";
+
+                txtFecha.Text = "30/11";
 
                 txtGrupo1.Text = "Grupo C";
                 txtGrupo2.Text = "Grupo C";
@@ -763,6 +802,8 @@ namespace Mundial
                 txtPais1.Text = "Arabia Saudita";
                 txtPais2.Text = "Mexico";
 
+                txtFecha.Text = "30/11";
+
                 txtGrupo1.Text = "Grupo C";
                 txtGrupo2.Text = "Grupo C";
             }
@@ -772,8 +813,10 @@ namespace Mundial
                 pictureBoxPais1.Image = Resources.BanFrancia;
                 pictureBoxPais2.Image = Resources.BanAustralia;
 
-               txtPais1.Text = "Francia";
-               txtPais2.Text = "Australia";
+                txtPais1.Text = "Francia";
+                txtPais2.Text = "Australia";
+
+                txtFecha.Text = "22/11";
 
                 txtGrupo1.Text = "Grupo D";
                 txtGrupo2.Text = "Grupo D";
@@ -787,6 +830,8 @@ namespace Mundial
                 txtPais1.Text = "Dinamarca";
                 txtPais2.Text = "Tunez";
 
+                txtFecha.Text = "22/11";
+
                 txtGrupo1.Text = "Grupo D";
                 txtGrupo2.Text = "Grupo D";
             }
@@ -798,6 +843,8 @@ namespace Mundial
 
                 txtPais1.Text = "Francia";
                 txtPais2.Text = "Dinamarca";
+
+                txtFecha.Text = "26/11";
 
                 txtGrupo1.Text = "Grupo D";
                 txtGrupo2.Text = "Grupo D";
@@ -811,6 +858,8 @@ namespace Mundial
                 txtPais1.Text = "Australia";
                 txtPais2.Text = "Tunez";
 
+                txtFecha.Text = "26/11";
+
                 txtGrupo1.Text = "Grupo D";
                 txtGrupo2.Text = "Grupo D";
             }
@@ -822,6 +871,8 @@ namespace Mundial
 
                 txtPais1.Text = "Francia";
                 txtPais2.Text = "Tunez";
+
+                txtFecha.Text = "30/11";
 
                 txtGrupo1.Text = "Grupo D";
                 txtGrupo2.Text = "Grupo D";
@@ -835,6 +886,8 @@ namespace Mundial
                 txtPais1.Text = "Australia";
                 txtPais2.Text = "Dinamarca";
 
+                txtFecha.Text = "30/11";
+
                 txtGrupo1.Text = "Grupo D";
                 txtGrupo2.Text = "Grupo D";
             }
@@ -846,6 +899,8 @@ namespace Mundial
 
                 txtPais1.Text = "España";
                 txtPais2.Text = "Costa Rica";
+
+                txtFecha.Text = "23/11";
 
                 txtGrupo1.Text = "Grupo E";
                 txtGrupo2.Text = "Grupo E";
@@ -859,6 +914,8 @@ namespace Mundial
                 txtPais1.Text = "Alemania";
                 txtPais2.Text = "Japon";
 
+                txtFecha.Text = "23/11";
+
                 txtGrupo1.Text = "Grupo E";
                 txtGrupo2.Text = "Grupo E";
             }
@@ -870,6 +927,8 @@ namespace Mundial
 
                 txtPais1.Text = "España";
                 txtPais2.Text = "Alemania";
+
+                txtFecha.Text = "27/11";
 
                 txtGrupo1.Text = "Grupo E";
                 txtGrupo2.Text = "Grupo E";
@@ -883,6 +942,8 @@ namespace Mundial
                 txtPais1.Text = "Costa Rica";
                 txtPais2.Text = "Japon";
 
+                txtFecha.Text = "27/11";
+
                 txtGrupo1.Text = "Grupo E";
                 txtGrupo2.Text = "Grupo E";
             }
@@ -894,6 +955,8 @@ namespace Mundial
     
                 txtPais1.Text = "España";
                 txtPais2.Text = "Japon";
+
+                txtFecha.Text = "1/12";
 
                 txtGrupo1.Text = "Grupo E";
                 txtGrupo2.Text = "Grupo E";
@@ -907,6 +970,8 @@ namespace Mundial
                 txtPais1.Text = "Costa Rica";
                 txtPais2.Text = "Alemania";
 
+                txtFecha.Text = "1/12";
+
                 txtGrupo1.Text = "Grupo E";
                 txtGrupo2.Text = "Grupo E";
             }
@@ -918,6 +983,8 @@ namespace Mundial
 
                 txtPais1.Text = "Belgica";
                 txtPais2.Text = "Canada";
+
+                txtFecha.Text = "23/11";
 
                 txtGrupo1.Text = "Grupo F";
                 txtGrupo2.Text = "Grupo F";
@@ -931,6 +998,8 @@ namespace Mundial
                 txtPais1.Text = "Marruecos";
                 txtPais2.Text = "Croacia";
 
+                txtFecha.Text = "23/11";
+
                 txtGrupo1.Text = "Grupo F";
                 txtGrupo2.Text = "Grupo F";
             }
@@ -942,6 +1011,8 @@ namespace Mundial
 
                 txtPais1.Text = "Belgica";
                 txtPais2.Text = "Marruecos";
+
+                txtFecha.Text = "27/11";
 
                 txtGrupo1.Text = "Grupo F";
                 txtGrupo2.Text = "Grupo F";
@@ -955,6 +1026,8 @@ namespace Mundial
                 txtPais1.Text = "Canada";
                 txtPais2.Text = "Croacia";
 
+                txtFecha.Text = "27/11";
+
                 txtGrupo1.Text = "Grupo F";
                 txtGrupo2.Text = "Grupo F";
             }
@@ -966,6 +1039,8 @@ namespace Mundial
 
                 txtPais1.Text = "Belgica";
                 txtPais2.Text = "Croacia";
+
+                txtFecha.Text = "1/12";
 
                 txtGrupo1.Text = "Grupo F";
                 txtGrupo2.Text = "Grupo F";
@@ -979,6 +1054,8 @@ namespace Mundial
                 txtPais1.Text = "Canada";
                 txtPais2.Text = "Marruecos";
 
+                txtFecha.Text = "1/12";
+
                 txtGrupo1.Text = "Grupo F";
                 txtGrupo2.Text = "Grupo F";
             }
@@ -990,6 +1067,8 @@ namespace Mundial
 
                 txtPais1.Text = "Brasil";
                 txtPais2.Text = "Serbia";
+
+                txtFecha.Text = "24/11";
 
                 txtGrupo1.Text = "Grupo G";
                 txtGrupo2.Text = "Grupo G";
@@ -1003,6 +1082,8 @@ namespace Mundial
                 txtPais1.Text = "Suiza";
                 txtPais2.Text = "Camerun";
 
+                txtFecha.Text = "24/11";
+
                 txtGrupo1.Text = "Grupo G";
                 txtGrupo2.Text = "Grupo G";
             }
@@ -1015,6 +1096,8 @@ namespace Mundial
                 txtPais1.Text = "Brasil";
                 txtPais2.Text = "Suiza";
 
+                txtFecha.Text = "28/11";
+
                 txtGrupo1.Text = "Grupo G";
                 txtGrupo2.Text = "Grupo G";
             }
@@ -1026,6 +1109,7 @@ namespace Mundial
 
                 txtPais1.Text = "Serbia";
                 txtPais2.Text = "Camerun";
+                txtFecha.Text = "28/11";
 
                 txtGrupo1.Text = "Grupo G";
                 txtGrupo2.Text = "Grupo G";
@@ -1039,6 +1123,8 @@ namespace Mundial
                txtPais1.Text = "Brasil";
                 txtPais2.Text = "Camerun";
 
+                txtFecha.Text = "2/12";
+
                 txtGrupo1.Text = "Grupo G";
                 txtGrupo2.Text = "Grupo G";
             }
@@ -1050,6 +1136,8 @@ namespace Mundial
 
                txtPais1.Text = "Serbia";
                 txtPais2.Text = "Suiza";
+
+                txtFecha.Text = "2/12";
 
                 txtGrupo1.Text = "Grupo G";
                 txtGrupo2.Text = "Grupo G";
@@ -1063,6 +1151,8 @@ namespace Mundial
                 txtPais1.Text = "Portugal";
                 txtPais2.Text = "Ghana";
 
+                txtFecha.Text = "24/11";
+
                 txtGrupo1.Text = "Grupo H";
                 txtGrupo2.Text = "Grupo H";
             }
@@ -1074,6 +1164,8 @@ namespace Mundial
 
                 txtPais1.Text = "Uruguay";
                 txtPais2.Text = "Corea del Sur";
+
+                txtFecha.Text = "24/11";
 
                 txtGrupo1.Text = "Grupo H";
                 txtGrupo2.Text = "Grupo H";
@@ -1087,6 +1179,8 @@ namespace Mundial
                 txtPais1.Text = "Portugal";
                 txtPais2.Text = "Uruguay";
 
+                txtFecha.Text = "28/11";
+
                 txtGrupo1.Text = "Grupo H";
                 txtGrupo2.Text = "Grupo H";
             }
@@ -1098,6 +1192,8 @@ namespace Mundial
 
                 txtPais1.Text = "Ghana";
                 txtPais2.Text = "Corea del Sur";
+
+                txtFecha.Text = "28/11";
 
                 txtGrupo1.Text = "Grupo H";
                 txtGrupo2.Text = "Grupo H";
@@ -1111,6 +1207,8 @@ namespace Mundial
                 txtPais1.Text = "Portugal";
                 txtPais2.Text = "Corea del Sur";
 
+                txtFecha.Text = "2/12";
+
                 txtGrupo1.Text = "Grupo H";
                 txtGrupo2.Text = "Grupo H";
             }
@@ -1122,6 +1220,8 @@ namespace Mundial
 
                 txtPais1.Text = "Ghana";
                 txtPais2.Text = "Uruguay";
+
+                txtFecha.Text = "2/12";
 
                 txtGrupo1.Text = "Grupo H";
                 txtGrupo2.Text = "Grupo H";
